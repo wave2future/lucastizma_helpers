@@ -9,6 +9,6 @@
 
 @interface UIActionSheet ( STAdditions )
 
-+ ( void )showStandardActionSheetWithTitle:( NSString * )title delegate:( id )delegate;
++ ( void )showYesNoActionSheetWithTitle:( NSString * )title delegate:( id )delegate;
 
 @end

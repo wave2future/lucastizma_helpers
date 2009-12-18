@@ -12,7 +12,7 @@
 #pragma mark -
 #pragma mark UIActionSheet ( STAdditions ) Category Methods
 
-+ ( void )showStandardActionSheetWithTitle:( NSString * )title delegate:( id )delegate
++ ( void )showYesNoActionSheetWithTitle:( NSString * )title delegate:( id )delegate
 {
 	UIActionSheet * actionSheet = [ [ [ UIActionSheet alloc ] initWithTitle:title
 																   delegate:delegate

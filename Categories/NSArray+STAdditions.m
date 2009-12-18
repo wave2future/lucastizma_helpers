@@ -19,8 +19,8 @@
 
 - ( NSArray * )sortedArrayWithDescriptorKeys:( NSArray * )keys ascending:( BOOL )ascending
 {
-	NSMutableArray * arrayToBeSorted = [ [ [ NSMutableArray alloc ] initWithArray:self ] autorelease ];
-	NSMutableArray * sortDescriptors = [ [ [ NSMutableArray alloc ] initWithCapacity:[ keys count ] ] autorelease ];
+	NSArray * arrayToBeSorted = [ NSArray arrayWithArray:self ];
+	NSMutableArray * sortDescriptors = [ NSMutableArray arrayWithCapacity:[ keys count ] ];
 	
 	for ( NSString * key in keys )
 	{

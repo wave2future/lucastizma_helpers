@@ -11,7 +11,7 @@
 @interface CATransition ( STAdditions )
 
 + ( void )animationWithType:( NSString * )type subtype:( NSString * )subtype duration:( CFTimeInterval )duration
-		 timingFunctionName:( NSString * )timingFunctionName onLayer:( CALayer * )layer;
+	 timingFunctionWithName:( NSString * )timingFunctionName onLayer:( CALayer * )layer;
 + ( void )standardFadeAnimationOnLayer:( CALayer * )layer;
 + ( void )standardMoveInAnimationWithSubtype:( NSString * )subtype onLayer:( CALayer * )layer;
 + ( void )standardPushAnimationWithSubtype:( NSString * )subtype onLayer:( CALayer * )layer;

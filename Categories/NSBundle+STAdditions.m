@@ -17,7 +17,7 @@
 	BOOL resourceExists = NO;
 	
 	NSString * fileNameExtension = [ fileName pathExtension ];
-	NSString * fileNameWithoutExtension = [ fileName substringToIndex:( ( [ fileName rangeOfString:fileNameExtension options:NSBackwardsSearch ] ).location - 1 ) ];
+    NSString * fileNameWithoutExtension = [ fileName stringByDeletingPathExtension ];
 	
 	if ( [ [ NSBundle mainBundle ] pathForResource:fileNameWithoutExtension ofType:fileNameExtension ] != nil ) 
 	{
