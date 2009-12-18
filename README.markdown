@@ -23,9 +23,9 @@ STPickerView
 
 Classes which make use of `STPickerView` should conform to the `STPickerViewDelegate` and `UIPickerViewDataSource` protocols. `STPickerView` will send callbacks to its delegate whenever the *Pick* or *Cancel* buttons are pressed, via `pickerView:didPickRows:` and `pickerViewDidCancel`, respectively. Pressing either button also hides the picker view. For now, `STPickerView` adds two buttons to its button toolbar: *Pick* and *Cancel*. **It is assumed that there are image assets named `picker-button-pick.png` and `picker-button-cancel.png` to be used as button graphics.**
 
-`STPickerView` supports multi-row pickers, and `pickerView:didPickRows:` provides the delegate with an array of `NSNumber`s (as `NSInteger`s) that represent the selected rows of each component. For example, in a three-component picker view, `pickerView:didPickRows:` might provide the following array: `[ 2, 0, 5 ]`. These means that the third, first, and sixths rows were selected from components one, two, and three, respectively.
+`STPickerView` supports multi-row pickers, and `pickerView:didPickRows:` provides the delegate with an array of `NSNumber`s (as `NSInteger`s) that represent the selected rows of each component. For example, in a three-component picker view, `pickerView:didPickRows:` might provide the following array: `[ 2, 0, 5 ]`. These means that the third, first, and sixth rows were selected from components one, two, and three, respectively.
 
-### STPickerView Method Signatures ###
+### STPickerView Methods ###
 
     - ( void )selectRow:( NSInteger )row inComponent:( NSInteger )component animated:( BOOL )animated;
     - ( void )pickButtonPressed;
@@ -34,7 +34,7 @@ Classes which make use of `STPickerView` should conform to the `STPickerViewDele
     - ( void )hide;
     - ( void )animationDidStop:( NSString * )animationID finished:( NSNumber * )finished context:( void * )context;
 
-### STPickerViewDelegate Method Signatures ###
+### STPickerViewDelegate Methods ###
 
     - ( void )pickerView:( UIPickerView * )pickerView didPickRows:( NSArray * )rows;
     - ( void )pickerViewDidCancel:( UIPickerView * )pickerView;
