@@ -38,3 +38,12 @@ Classes which make use of `STPickerView` should conform to the `STPickerViewDele
 
     - ( void )pickerView:( UIPickerView * )pickerView didPickRows:( NSArray * )rows;
     - ( void )pickerViewDidCancel:( UIPickerView * )pickerView;
+
+| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|
+| This       |        This |     This     |
+| column     |      column |    column    |
+| will       |        will |     will     |
+| be         |          be |      be      |
+| left       |       right |    center    |
+| aligned    |     aligned |   aligned    |
