@@ -17,4 +17,13 @@ STPickerView
 
 ![STPickerView](http://farm3.static.flickr.com/2793/4194762407_28f9e5f9e1.jpg "STPickerView")
 
-`STPickerView` was created because `UIPickerView` does not naturally facilitate picker views that can be easily shown (slide-up) and hidden (slide-down) without manually implementing view hiding.
+`STPickerView` was created because `UIPickerView` does not naturally facilitate picker views that can be easily shown (slide-up) and hidden (slide-down) without manually implementing view hiding. It also includes a button toolbar similar to how `UIPickerView` does in Mobile Safari.
+
+### Method Signatures ###
+
+    - ( void )selectRow:( NSInteger )row inComponent:( NSInteger )component animated:( BOOL )animated;
+    - ( void )pickButtonPressed;
+    - ( void )cancelButtonPressed;
+    - ( void )show;
+    - ( void )hide;
+    - ( void )animationDidStop:( NSString * )animationID finished:( NSNumber * )finished context:( void * )context;
