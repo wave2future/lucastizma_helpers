@@ -19,13 +19,11 @@ STPickerView
 
 `STPickerView` was created because `UIPickerView` does not naturally facilitate picker views that can be easily shown (slide-up) and hidden (slide-down) without manually implementing view hiding. It also includes a button toolbar similar to how `UIPickerView` does in Mobile Safari.
 
-### Method Signatures ###
-
 `STPickerView` has a very simple implementation. Once initialized with `UIView`'s `initWithFrame:` method and assigned a `delegate` and `dataSource`, you just call `show` and `hide` to slide-up and slide-down the picker view, respectively. In its current implementation, you do not add your instance of `STPickerView` as a subview to any view. **Instead, `STPickerView` adds itself (hidden) to the view of the selected view controller of a tab bar controller, which is assumed to be attached to the app delegate. This is implementation specific and needs to be changed.**
 
 Classes which make use of `STPickerView` should conform to the `STPickerViewDelegate` and `UIPickerViewDataSource` protocols. `STPickerView` will send callbacks to its delegate whenever the *Pick* or *Cancel* buttons are pressed, via `pickerView:didPickRows:` and `pickerViewDidCancel`, respectively. Pressing either button also hides the picker view. For now, `STPickerView` adds two buttons to its button toolbar: *Pick* and *Cancel*. **It is assumed that there are image assets named `picker-button-pick.png` and `picker-button-cancel.png` to be used as button graphics.**
 
-#### STPickerView ####
+### STPickerView Method Signatures ###
 
     - ( void )selectRow:( NSInteger )row inComponent:( NSInteger )component animated:( BOOL )animated;
     - ( void )pickButtonPressed;
@@ -34,7 +32,7 @@ Classes which make use of `STPickerView` should conform to the `STPickerViewDele
     - ( void )hide;
     - ( void )animationDidStop:( NSString * )animationID finished:( NSNumber * )finished context:( void * )context;
 
-#### STPickerViewDelegate ####
+### STPickerViewDelegate Method Signatures ###
 
     - ( void )pickerView:( UIPickerView * )pickerView didPickRows:( NSArray * )rows;
     - ( void )pickerViewDidCancel:( UIPickerView * )pickerView;
