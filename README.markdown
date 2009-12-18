@@ -21,9 +21,16 @@ STPickerView
 
 ### Method Signatures ###
 
+#### STPickerView ####
+
     - ( void )selectRow:( NSInteger )row inComponent:( NSInteger )component animated:( BOOL )animated;
     - ( void )pickButtonPressed;
     - ( void )cancelButtonPressed;
     - ( void )show;
     - ( void )hide;
     - ( void )animationDidStop:( NSString * )animationID finished:( NSNumber * )finished context:( void * )context;
+
+#### STPickerViewDelegate ####
+
+    - ( void )pickerView:( UIPickerView * )pickerView didPickRows:( NSArray * )rows;
+    - ( void )pickerViewDidCancel:( UIPickerView * )pickerView;
