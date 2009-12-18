@@ -50,7 +50,7 @@
 		
 		for ( NSInteger index = 0; index < self.pickerView.numberOfComponents; index++ )
 		{
-			[ selectedRows addObject:[ NSNumber numberWithInt:[ self.pickerView selectedRowInComponent:index ] ] ];
+			[ selectedRows addObject:[ NSNumber numberWithInteger:[ self.pickerView selectedRowInComponent:index ] ] ];
 		}
 		
 		[ self.delegate performSelector:@selector( pickerView:didPickRows: ) withObject:self.pickerView withObject:selectedRows ];
