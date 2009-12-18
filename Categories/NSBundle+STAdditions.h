@@ -1,6 +1,5 @@
 //
 //  NSBundle+STAdditions.h
-//  SpotTrot
 //
 //  Created by Michael Potter on 6/13/09.
 //  Copyright 2009 INM United. All rights reserved.

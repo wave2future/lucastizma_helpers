@@ -1,13 +1,11 @@
 //
 //  UIActionSheet+STAdditions.m
-//  SpotTrot
 //
 //  Created by Michael Potter on 8/20/09.
 //  Copyright 2009 INM United. All rights reserved.
 //
 
 #import "UIActionSheet+STAdditions.h"
-#import "STGlobalReferences.h"
 
 @implementation UIActionSheet ( STAdditions )
 
@@ -24,7 +22,7 @@
 	
 	actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
 	
-	[ actionSheet showInView:STAppKeyWindow ];
+	[ actionSheet showInView:[ [ UIApplication sharedApplication ] keyWindow ] ];
 }
 
 @end

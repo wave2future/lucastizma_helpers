@@ -10,21 +10,21 @@ Note: The classes provided here were created as generically as possible. However
 
 Currently, the following custom classes are available:
 
-- **STPickerView**: This is a subclass of `UIPickerView` that easily allows you to create slide-up/slide-down picker views similar to those found in Mobile Safari.
+- <a href="#stpickerview">**STPickerView**</a>: A subclass of `UIPickerView` that easily allows you to create slide-up/slide-down picker views similar to those found in Mobile Safari.
 
 Currently, the following categories are available:
 
-- **CATransition+STAdditions**: 
-- **NSArray+STAdditions**: 
-- **NSBundle+STAdditions**: 
-- **NSString+STAdditions**: 
-- **UIActionSheet+STAdditions**: 
-- **UIAlertView+STAdditions**: 
-- **UITableView+STAdditions**: 
-- **UITextField+STAdditions**: 
-- **UIView+STAdditions**: 
+- **CATransition+STAdditions**: Contains methods for setting up `CATransition` animations easily.
+- **NSArray+STAdditions**: Contains methods for sorting arrays using descriptor keys, mostly for syntactical convenience.
+- **NSBundle+STAdditions**: Contains a method for checking if a resource exists in the main resource bundle, mostly for syntactical convenience.
+- **NSString+STAdditions**: Contains a handful of helpful string method, mostly for syntactical convenience.
+- **UIActionSheet+STAdditions**: Contains a method for showing a standard "Yes"/"No" action sheet in the key window.
+- **UIAlertView+STAdditions**: Contains methods for showing a standard "OK" alert view.
+- **UITableView+STAdditions**: Contains methods for creating new or reusable table view cells based on either a string identifier or class.
+- **UITextField+STAdditions**: Contains methods for adding and padding text field "captions".
+- **UIView+STAdditions**: Contains a handful of helpful view methods to modify frames, mostly for syntactical convenience.
 
-STPickerView
+<a name="stpickerview">STPickerView</a>
 ------------
 
 ![STPickerView](http://farm3.static.flickr.com/2793/4194762407_28f9e5f9e1.jpg "STPickerView")
@@ -50,3 +50,6 @@ Classes which make use of `STPickerView` should conform to the `STPickerViewDele
 
     - ( void )pickerView:( UIPickerView * )pickerView didPickRows:( NSArray * )rows;
     - ( void )pickerViewDidCancel:( UIPickerView * )pickerView;
+
+STPickerView
+------------

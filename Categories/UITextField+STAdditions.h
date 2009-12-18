@@ -1,6 +1,5 @@
 //
 //  UITextField+STAdditions.h
-//  SpotTrot
 //
 //  Created by Michael Potter on 8/14/09.
 //  Copyright 2009 INM United. All rights reserved.

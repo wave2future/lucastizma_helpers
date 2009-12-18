@@ -1,13 +1,11 @@
 //
 //  UIAlertView+STAdditions.m
-//  SpotTrot
 //
 //  Created by Michael Potter on 8/17/09.
 //  Copyright 2009 INM United. All rights reserved.
 //
 
 #import "UIAlertView+STAdditions.h"
-#import "STGlobalReferences.h"
 
 @implementation UIAlertView ( STAdditions )
 

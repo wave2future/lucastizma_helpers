@@ -1,13 +1,11 @@
 //
 //  CATransition+STAdditions.m
-//  SpotTrot
 //
 //  Created by Michael Potter on 6/6/09.
 //  Copyright 2009 INM United. All rights reserved.
 //
 
 #import "CATransition+STAdditions.h"
-#import "STGlobalReferences.h"
 
 @implementation CATransition ( STAdditions )
 
@@ -33,7 +31,25 @@
 
 + ( void )standardFadeAnimationOnLayer:( CALayer * )layer
 {
-	[ CATransition animationWithType:kCATransitionFade subtype:nil duration:STAnimationTimeIntervalDefault
+	[ CATransition animationWithType:kCATransitionFade subtype:nil duration:0.2
+				  timingFunctionName:kCAMediaTimingFunctionEaseInEaseOut onLayer:layer ];
+}
+
++ ( void )standardMoveInAnimationWithSubtype:( NSString * )subtype onLayer:( CALayer * )layer
+{
+	[ CATransition animationWithType:kCATransitionMoveIn subtype:subtype duration:0.2
+				  timingFunctionName:kCAMediaTimingFunctionEaseInEaseOut onLayer:layer ];
+}
+
++ ( void )standardPushAnimationWithSubtype:( NSString * )subtype onLayer:( CALayer * )layer
+{
+	[ CATransition animationWithType:kCATransitionPush subtype:subtype duration:0.2
+				  timingFunctionName:kCAMediaTimingFunctionEaseInEaseOut onLayer:layer ];
+}
+
++ ( void )standardRevealAnimationWithSubtype:( NSString * )subtype onLayer:( CALayer * )layer
+{
+	[ CATransition animationWithType:kCATransitionReveal subtype:subtype duration:0.2
 				  timingFunctionName:kCAMediaTimingFunctionEaseInEaseOut onLayer:layer ];
 }
 
