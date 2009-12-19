@@ -74,8 +74,8 @@ For example, compare
 
 with the functionally identical yet syntactically more succinct
 
-    [ CATransition animationWithType:kCATransitionFade subtype:nil duration:0.4 timingFunctionWithName:kCAMediaTimingFunctionEaseInEaseOut
-                             onLayer:someView.layer ];
+    [ CATransition animationWithType:kCATransitionFade subtype:nil duration:0.4
+              timingFunctionWithName:kCAMediaTimingFunctionEaseInEaseOut onLayer:someView.layer ];
 
 Also, if you find yourself typically creating the same simple animations over and over, you can use a standard animation method provided by `CATransition+STAdditions`: `[ CATransition standardFadeAnimationOnLayer:someView.layer ];` In these methods, default duration and timing functions values are used.
 
@@ -113,7 +113,7 @@ with the functionally similar yet syntactically more succinct
     Person * thirdPerson  = [ [ Person alloc ] initWithName:@"Ninten" homeTown:@"Podunk" ];
 
     NSArray * sortedArray = [ [ NSArray arrayWithObjects:firstPerson, secondPerson, thirdPerson, nil ]
-						      sortedArrayWithDescriptorKeys:[ NSArray arrayWithObjects:@"homeTown", @"name", nil ] ascending:YES ];
+						   sortedArrayWithDescriptorKeys:[ NSArray arrayWithObjects:@"homeTown", @"name", nil ] ascending:YES ];
 						
 Both code snippets result in the same sorted array (e.g., `[ "Ninten from Podunk", "Pippi from Podunk", "Ana from Snow Man" ]` ), yet the second one is shorter. Note that these convenience methods require that all sort descriptors use the same sort order, provided by the `ascending` parameter.
 
@@ -171,11 +171,11 @@ UIActionSheet+STAdditions<a name="uiactionsheet+stadditions"></a>
 
 *This class probably contains implementation-specific details, most (if not all) of which are indicated in ***bold*** below.*
 
-`UIActionSheet+STAdditions` provides a method as a shorthand for creating a simple action sheet with a title and *Yes* and *No* buttons. **The implementation of `showYesNoActionSheetWithTitle:delegate:` is slightly implementation-specific in that uses an action sheet style of `UIActionSheetStyleBlackTranslucent` and shows itself in the app delegate's key window.**
+`UIActionSheet+STAdditions` provides a method as a shorthand for creating a simple action sheet with a title and *Yes* and *No* buttons. **The implementation of `showYesNoActionSheetWithTitle:delegate:` is slightly implementation-specific in that it uses an action sheet style of `UIActionSheetStyleBlackTranslucent` and shows itself in the app delegate's key window.**
 
 For example, compare
 
-	UIActionSheet * actionSheet = [ [ [ UIActionSheet alloc ] initWithTitle:@"This is an action sheet. Will you pick \"Yes\" or \"No\"?"
+	UIActionSheet * actionSheet = [ [ [ UIActionSheet alloc ] initWithTitle:@"This is an action sheet. Pick \"Yes\" or \"No\"."
 																   delegate:someInstance
 														  cancelButtonTitle:@"No"
 													 destructiveButtonTitle:@"Yes"
@@ -187,7 +187,7 @@ For example, compare
 	
 with the functionally identical yet syntactically more succinct
 
-	[ UIActionSheet showYesNoActionSheetWithTitle:@"This is an action sheet. Will you pick \"Yes\" or \"No\"?" delegate:someInstance ];
+	[ UIActionSheet showYesNoActionSheetWithTitle:@"This is an action sheet. Pick \"Yes\" or \"No\"." delegate:someInstance ];
 
 UIAlertView+STAdditions<a name="uialertview+stadditions"></a>
 -----------------------
@@ -205,7 +205,7 @@ UIAlertView+STAdditions<a name="uialertview+stadditions"></a>
 For example, compare
 
 	UIAlertView * alertView = [ [ [ UIAlertView alloc ] initWithTitle:@"Alert View"
-															  message:@"This is a simple alert view. You have no choice but to tap \"OK\"!"
+															  message:@"This is a simple alert view. Tap \"OK\"."
 															 delegate:someInstance
 													cancelButtonTitle:@"OK"
 													otherButtonTitles:nil ] autorelease ];
@@ -214,7 +214,7 @@ For example, compare
 	
 with the functionally identical yet syntactically more succinct
 
-	[ UIAlertView showStandardAlertViewWithTitle:@"Alert View" message:@"This is a simple alert view. You have no choice but to tap \"OK\"!" ];
+	[ UIAlertView showStandardAlertViewWithTitle:@"Alert View" message:@"This is a simple alert view. Tap \"OK\"." ];
 
 UITableView+STAdditions<a name="uitableview+stadditions"></a>
 -----------------------
@@ -227,14 +227,63 @@ UITableView+STAdditions<a name="uitableview+stadditions"></a>
     - ( UITableViewCell * )dequeueReusableCellWithIdentifier:( NSString * )identifier nibName:( NSString * )nibName;
     - ( UITableViewCell * )dequeueReusableCellWithClass:( Class )class;
 
+*This class probably contains implementation-specific details, most (if not all) of which are indicated in ***bold*** below.*
+
+`UITableView+STAdditions` allows you to easily create table view cells (reusable or not).
+
+For example, compare
+
+	static NSString * identifier = @"CustomCellViewIdentifier";
+	static NSString * nibName = @"CustomCellView";
+	UITableViewCell * cell = [ someTableView dequeueReusableCellWithIdentifier:identifier ];
+ 
+	if ( cell == nil )
+	{
+		NSArray * nib = [ [ NSBundle mainBundle ] loadNibNamed:nibName owner:self options:nil ];
+		cell = [ nib objectAtIndex:0 ];
+	}
+	
+with the functionally similar yet syntactically more succinct
+
+	static NSString * identifier = @"CustomCellViewIdentifier";
+	static NSString * nibName = @"CustomCellView";
+	UITableView * cell = [ someTableView dequeueReusableCellWithIdentifier:identifier nibName:nibName ];
+	
+This class also provides an even shorter table view cell creation form (again, reusable or not). **Note, however, that it assumes that you conform your custom table view cell class name, NIB name, and reuse identifier to a particular naming convention. That is, they must be something like  `CustomTableViewCell` (class name), `CustomTableViewCell` (NIB name), and `CustomTableViewCellIdentifier` (reuse identifier)**. Conforming to this naming convention allows you to do something like the following:
+
+    CustomTableViewCell * cell = ( CustomTableViewCell * )[ someTableView dequeueReusableCellWithClass:[ CustomTableViewCell class ] ];
+
+or
+
+	CustomTableViewCell * cell = ( CustomTableViewCell * )[ someTableView createNewCellWithClass:[ CustomTableViewCell class ] ];
+
 UITextField+STAdditions<a name="uitextfield+stadditions"></a>
 -----------------------
 [(back to top)](#top)
+
+![UITextField+STAdditions](http://farm3.static.flickr.com/2724/4196383250_c60db92c5b_o.png "UITextField+STAdditions")
 
 ### UITextField+STAdditions Methods ###
 
     - ( void )setCaption:( NSString * )caption;
 	+ ( void )padCaptions:( UITextField * )firstCaption, ...;
+	
+*This class should not contain any implementation-specific details.*
+
+`UITextField+STAdditions` allows you to create a "caption" for a text field (see image above). It assigns a label to a text field's left view. A collection of text fields can all have their left views padded so that the widest text field caption label in the collection determines the width of all the other caption labels of the text fields in the same collection. This ensures that the entry point for the keyboard is the same for every text field.
+
+For example,
+
+	[ self.emailTextField setCaption:@"E-mail" ];
+	[ self.userNameTextField setCaption:@"User Name" ];
+	[ self.fullNameTextField setCaption:@"Full Name" ];
+	[ self.passwordTextField setCaption:@"Password" ];
+	[ self.confirmTextField setCaption:@"Confirm" ];
+
+	[ UITextField padCaptions:self.emailTextField, self.userNameTextField, self.fullNameTextField,
+	  self.passwordTextField, self.confirmTextField, nil ];
+	
+produces the result in the sample image above. Because the "User Name" text field has the widest caption, the caption's width is used to add additional spaces to the rest of the text field captions.
 
 UIView+STAdditions<a name="uiview+stadditions"></a>
 ------------------
@@ -251,3 +300,21 @@ UIView+STAdditions<a name="uiview+stadditions"></a>
     - ( void )shiftFrameWidth:( CGFloat )width animated:( BOOL )animated duration:( NSTimeInterval )duration;
     - ( void )shiftFrameHeight:( CGFloat )height animated:( BOOL )animated duration:( NSTimeInterval )duration;
     + ( void )beginAnimations;
+
+*This class should not contain any implementation-specific details.*
+
+`UIView+STAdditions` contains several helper methods used to more easily adjust components of a view's frame (`origin.x`, `origin.y`, `size.width`, `size.height`). There are methods to completely change the values of these components as well as methods to simply adjust the values of the components relatively. If these methods are called with the `animated:` and `duration:` selectors set to `YES` and a valid `NSTimeInterval` value, respectively, then the changes to the view will be animated using a `UIView` animation context. If the animation ID and context are not important for a particular animation (as they rarely are), you can use `beginAnimations` to avoid having to call `beginAnimations:context:`.
+
+For example, compare
+
+	[ UIView beginAnimations:nil context:NULL ];
+	[ UIView setAnimationDuration:0.5 ];
+
+	someView.frame = CGRectMake( ( someView.frame.origin.x + 40.0 ), someView.frame.origin.y,
+							     someView.frame.size.width, someView.frame.size.height );
+							
+	[ UIView commitAnimations ];
+							
+with the functionally identical yet syntactically more succinct
+
+	[ someView shiftFrameX:40.0 animated:YES duration:0.5 ];
