@@ -206,7 +206,7 @@ For example, compare
 
 	UIAlertView * alertView = [ [ [ UIAlertView alloc ] initWithTitle:@"Alert View"
 															  message:@"This is a simple alert view. Tap \"OK\"."
-															 delegate:someInstance
+															 delegate:nil
 													cancelButtonTitle:@"OK"
 													otherButtonTitles:nil ] autorelease ];
 	
