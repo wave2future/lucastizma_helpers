@@ -11,6 +11,7 @@
 {
 	UIView * totalContainerView;
 	UIView * buttonBarContainerView;
+	UIView * backgroundView;
 	UIButton * pickButton;
 	UIButton * cancelButton;
 	UIPickerView * pickerView;
@@ -25,6 +26,7 @@
 
 @property ( nonatomic, retain ) UIView * totalContainerView;
 @property ( nonatomic, retain ) UIView * buttonBarContainerView;
+@property ( nonatomic, retain ) UIView * backgroundView;
 @property ( nonatomic, retain ) UIButton * pickButton;
 @property ( nonatomic, retain ) UIButton * cancelButton;
 @property ( nonatomic, retain ) UIPickerView * pickerView;

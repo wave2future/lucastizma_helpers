@@ -6,6 +6,7 @@
 //
 
 #import "STPickerView.h"
+#import "STGlobalReferences.h"
 
 @implementation STPickerView
 
@@ -13,6 +14,7 @@
 
 @synthesize totalContainerView;
 @synthesize buttonBarContainerView;
+@synthesize backgroundView;
 @synthesize pickButton;
 @synthesize cancelButton;
 @synthesize pickerView;
@@ -21,6 +23,8 @@
 
 @synthesize delegate;
 @synthesize dataSource;
+
+static NSString * kPickerViewHideAnimationID = @"STPickerViewWillHide";
 
 #pragma mark -
 #pragma mark STPickerView Methods
@@ -71,40 +75,41 @@
 
 - ( void )show
 {	
-	UINavigationController * selectedNavigationController = ( UINavigationController * )STAppDelegateTabBarController.selectedViewController;
+	[ CATransition standardFadeAnimationOnLayer:STActiveNavigationController.navigationBar.layer ];
+	[ CATransition standardFadeAnimationOnLayer:self.backgroundView.layer ];
 	
-	[ CATransition standardFadeAnimationOnLayer:selectedNavigationController.navigationBar.layer ];
-	
-	selectedNavigationController.visibleViewController.navigationItem.leftBarButtonItem.enabled = NO;
-	selectedNavigationController.visibleViewController.navigationItem.rightBarButtonItem.enabled = NO;
+	STActiveViewController.navigationItem.leftBarButtonItem.enabled = NO;
+	STActiveViewController.navigationItem.rightBarButtonItem.enabled = NO;
 	
 	self.hidden = NO;
+	self.backgroundView.hidden = NO;
 	
-	[ self.totalContainerView shiftFrameY:-260.0 animated:YES duration:STAnimationTimeIntervalDefault ];
+	[ self.totalContainerView shiftFrameY:( -1.0 * self.totalContainerView.frame.size.height ) animatedForDuration:STAnimationTimeIntervalDefault ];
 }
 
 - ( void )hide
-{
-	UINavigationController * selectedNavigationController = ( UINavigationController * )STAppDelegateTabBarController.selectedViewController;
+{	
+	[ CATransition standardFadeAnimationOnLayer:STActiveNavigationController.navigationBar.layer ];
+	[ CATransition standardFadeAnimationOnLayer:self.backgroundView.layer ];
 	
-	[ CATransition standardFadeAnimationOnLayer:selectedNavigationController.navigationBar.layer ];
+	STActiveViewController.navigationItem.leftBarButtonItem.enabled = YES;
+	STActiveViewController.navigationItem.rightBarButtonItem.enabled = YES;
 	
-	selectedNavigationController.visibleViewController.navigationItem.leftBarButtonItem.enabled = YES;
-	selectedNavigationController.visibleViewController.navigationItem.rightBarButtonItem.enabled = YES;
+	self.backgroundView.hidden = YES;
 	
-	[ UIView beginAnimations:@"STPickerViewWillHide" context:NULL ];
+	[ UIView beginAnimations:kPickerViewHideAnimationID context:NULL ];
 	[ UIView setAnimationDelegate:self ];
 	[ UIView setAnimationDidStopSelector:@selector( animationDidStop:finished:context: ) ];
 	[ UIView setAnimationDuration:STAnimationTimeIntervalDefault ];
 	
-	[ self.totalContainerView shiftFrameY:260.0 animated:NO duration:0 ];
+	[ self.totalContainerView shiftFrameY:self.totalContainerView.frame.size.height ];
 	
 	[ UIView commitAnimations ];
 }
 
 - ( void )animationDidStop:( NSString * )animationID finished:( NSNumber * )finished context:( void * )context
 {
-	if ( [ animationID isEqualToString:@"STPickerViewWillHide" ] )
+	if ( [ animationID isEqualToString:kPickerViewHideAnimationID ] )
 	{
 		self.hidden = YES;
 	}
@@ -121,7 +126,7 @@
 	{
 		pickerView = [ [ UIPickerView alloc ] init ];
 		self.pickerView.showsSelectionIndicator = YES;
-		[ self.pickerView setFrameY:44.0 animated:NO duration:0.0 ];
+		[ self.pickerView setFrameY:44.0 ];
 		
 		totalContainerView = [ [ UIView alloc ] initWithFrame:CGRectMake( 0.0, aRect.size.height, 320.0, 260.0 ) ];
 		
@@ -146,8 +151,13 @@
 		[ self.totalContainerView addSubview:self.buttonBarContainerView ];
 		[ self.totalContainerView addSubview:self.pickerView ];
 		
-		[ self addSubview:self.totalContainerView ];
+		backgroundView = [ [ UIView alloc ] initWithFrame:CGRectMake( 0.0, 0.0, 320.0, 108.0 ) ];
+		self.backgroundView.backgroundColor = [ UIColor blackColor ];
+		self.backgroundView.alpha = 0.8;
+		self.backgroundView.hidden = YES;
 		
+		[ self addSubview:self.totalContainerView ];
+		[ self addSubview:self.backgroundView ];
 		self.hidden = YES;
 		
 		[ STAppDelegateTabBarController.selectedViewController.view addSubview:self ];
@@ -170,6 +180,7 @@
 	
 	[ totalContainerView release ];
 	[ buttonBarContainerView release ];
+	[ backgroundView release ];
 	[ pickButton release ];
 	[ cancelButton release ];
 	[ pickerView release ];
