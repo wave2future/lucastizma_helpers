@@ -47,7 +47,7 @@
 
 @optional
 
-- ( void )pickerView:( STPickerView * )pickerView didPickRows:( NSArray * )rows;
-- ( void )pickerViewDidCancel:( STPickerView * )pickerView;
+- ( void )pickerView:( UIPickerView * )pickerView didPickRows:( NSArray * )rows;
+- ( void )pickerViewDidCancel:( UIPickerView * )pickerView;
 
 @end
