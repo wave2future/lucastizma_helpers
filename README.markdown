@@ -41,8 +41,8 @@ STPickerView<a name="stpickerview"></a>
 
 ### STPickerViewDelegate Methods ###
 
-    - ( void )pickerView:( STPickerView * )pickerView didPickRows:( NSArray * )rows;
-    - ( void )pickerViewDidCancel:( STPickerView * )pickerView;
+    - ( void )pickerView:( UIPickerView * )pickerView didPickRows:( NSArray * )rows;
+    - ( void )pickerViewDidCancel:( UIPickerView * )pickerView;
 
 *This class probably contains implementation-specific details, most (if not all) of which are indicated in ***bold*** below.*
 
