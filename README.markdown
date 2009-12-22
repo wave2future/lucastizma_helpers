@@ -1,5 +1,4 @@
-<a name=top></a>
-Spot Trot Helpers
+Spot Trot Helpers<a name=top></a>
 =================
 
 Overview
