@@ -9,14 +9,22 @@
 
 @interface UIView ( STAdditions )
 
-- ( void )setFrameX:( CGFloat )x animated:( BOOL )animated duration:( NSTimeInterval )duration;
-- ( void )setFrameY:( CGFloat )y animated:( BOOL )animated duration:( NSTimeInterval )duration;
-- ( void )setFrameWidth:( CGFloat )width animated:( BOOL )animated duration:( NSTimeInterval )duration;
-- ( void )setFrameHeight:( CGFloat )height animated:( BOOL )animated duration:( NSTimeInterval )duration;
-- ( void )shiftFrameX:( CGFloat )x animated:( BOOL )animated duration:( NSTimeInterval )duration;
-- ( void )shiftFrameY:( CGFloat )y animated:( BOOL )animated duration:( NSTimeInterval )duration;
-- ( void )shiftFrameWidth:( CGFloat )width animated:( BOOL )animated duration:( NSTimeInterval )duration;
-- ( void )shiftFrameHeight:( CGFloat )height animated:( BOOL )animated duration:( NSTimeInterval )duration;
+- ( void )setFrameX:( CGFloat )x;
+- ( void )setFrameY:( CGFloat )y;
+- ( void )setFrameWidth:( CGFloat )width;
+- ( void )setFrameHeight:( CGFloat )height;
+- ( void )shiftFrameX:( CGFloat )x;
+- ( void )shiftFrameY:( CGFloat )y;
+- ( void )shiftFrameWidth:( CGFloat )width;
+- ( void )shiftFrameHeight:( CGFloat )height;
+- ( void )setFrameX:( CGFloat )x animatedForDuration:( NSTimeInterval )duration;
+- ( void )setFrameY:( CGFloat )y animatedForDuration:( NSTimeInterval )duration;
+- ( void )setFrameWidth:( CGFloat )width animatedForDuration:( NSTimeInterval )duration;
+- ( void )setFrameHeight:( CGFloat )height animatedForDuration:( NSTimeInterval )duration;
+- ( void )shiftFrameX:( CGFloat )x animatedForDuration:( NSTimeInterval )duration;
+- ( void )shiftFrameY:( CGFloat )y animatedForDuration:( NSTimeInterval )duration;
+- ( void )shiftFrameWidth:( CGFloat )width animatedForDuration:( NSTimeInterval )duration;
+- ( void )shiftFrameHeight:( CGFloat )height animatedForDuration:( NSTimeInterval )duration;
 + ( void )beginAnimations;
 
 @end

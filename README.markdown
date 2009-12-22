@@ -291,19 +291,29 @@ UIView+STAdditions<a name="uiview+stadditions"></a>
 
 ### UIView+STAdditions Methods ###
 
-    - ( void )setFrameX:( CGFloat )x animated:( BOOL )animated duration:( NSTimeInterval )duration;
-    - ( void )setFrameY:( CGFloat )y animated:( BOOL )animated duration:( NSTimeInterval )duration;
-    - ( void )setFrameWidth:( CGFloat )width animated:( BOOL )animated duration:( NSTimeInterval )duration;
-    - ( void )setFrameHeight:( CGFloat )height animated:( BOOL )animated duration:( NSTimeInterval )duration;
-    - ( void )shiftFrameX:( CGFloat )x animated:( BOOL )animated duration:( NSTimeInterval )duration;
-    - ( void )shiftFrameY:( CGFloat )y animated:( BOOL )animated duration:( NSTimeInterval )duration;
-    - ( void )shiftFrameWidth:( CGFloat )width animated:( BOOL )animated duration:( NSTimeInterval )duration;
-    - ( void )shiftFrameHeight:( CGFloat )height animated:( BOOL )animated duration:( NSTimeInterval )duration;
-    + ( void )beginAnimations;
+    - ( void )setFrameX:( CGFloat )x;
+	- ( void )setFrameY:( CGFloat )y;
+	- ( void )setFrameWidth:( CGFloat )width;
+	- ( void )setFrameHeight:( CGFloat )height;
+	- ( void )shiftFrameX:( CGFloat )x;
+	- ( void )shiftFrameY:( CGFloat )y;
+	- ( void )shiftFrameWidth:( CGFloat )width;
+	- ( void )shiftFrameHeight:( CGFloat )height;
+	- ( void )setFrameX:( CGFloat )x animatedForDuration:( NSTimeInterval )duration;
+	- ( void )setFrameY:( CGFloat )y animatedForDuration:( NSTimeInterval )duration;
+	- ( void )setFrameWidth:( CGFloat )width animatedForDuration:( NSTimeInterval )duration;
+	- ( void )setFrameHeight:( CGFloat )height animatedForDuration:( NSTimeInterval )duration;
+	- ( void )shiftFrameX:( CGFloat )x animatedForDuration:( NSTimeInterval )duration;
+	- ( void )shiftFrameY:( CGFloat )y animatedForDuration:( NSTimeInterval )duration;
+	- ( void )shiftFrameWidth:( CGFloat )width animatedForDuration:( NSTimeInterval )duration;
+	- ( void )shiftFrameHeight:( CGFloat )height animatedForDuration:( NSTimeInterval )duration;
+	+ ( void )beginAnimations;
 
 *This class should not contain any implementation-specific details.*
 
-`UIView+STAdditions` contains several helper methods used to more easily adjust components of a view's frame (`origin.x`, `origin.y`, `size.width`, `size.height`). There are methods to completely change the values of these components as well as methods to simply adjust the values of the components relatively. If these methods are called with the `animated:` and `duration:` selectors set to `YES` and a valid `NSTimeInterval` value, respectively, then the changes to the view will be animated using a `UIView` animation context. If the animation ID and context are not important for a particular animation (as they rarely are), you can use `beginAnimations` to avoid having to call `beginAnimations:context:`.
+`UIView+STAdditions` contains several helper methods used to more easily adjust components of a view's frame (`origin.x`, `origin.y`, `size.width`, `size.height`). There are methods to completely change the values of these components (e.g., `setFrameX:`) as well as methods to simply adjust the values of the components relatively (e.g, `shiftFrameX:`). *Keep in mind that, although slightly counterintuitive, passing a positive `y` value for `setFrameY:`, `shiftFrameY:`, `setFrameY:animatedForDuration:` or `shiftFrameY:animatedForDuration:` will result in the view's position being below its original position visually. Conversely, a negative `y` value will result in the view's position being above its original position visually. This is due to how coordinate systems are typically implemented for GUIs.*
+
+If these methods are called with the `animatedForDuration:` selector set to a valid `NSTimeInterval` value, then the changes to the view will be animated using a `UIView` animation context. If the animation ID and context are not important for a particular animation (as they rarely are), you can use `beginAnimations` to avoid having to call `beginAnimations:context:`.
 
 For example, compare
 
@@ -317,4 +327,4 @@ For example, compare
 							
 with the functionally identical yet syntactically more succinct
 
-	[ someView shiftFrameX:40.0 animated:YES duration:0.5 ];
+	[ someView shiftFrameX:40.0 animatedForDuration:0.5 ];

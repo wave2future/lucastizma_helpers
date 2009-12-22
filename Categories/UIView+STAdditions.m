@@ -12,177 +12,125 @@
 #pragma mark -
 #pragma mark UIView ( STAdditions ) Category Methods
 
-// setFrameX:animted:duration:
-//
-// This method "changes" this view's frame's x coordinate to the value of the "x" parameter by creating a new CGRect with all other CGRectMake() 
-// function parameters being the same as the current frame. Animation is optionally applied.
-
-- ( void )setFrameX:( CGFloat )x animated:( BOOL )animated  duration:( NSTimeInterval )duration
+- ( void )setFrameX:( CGFloat )x
 {
-	if ( animated )
-	{
-		[ UIView beginAnimations ];
-		[ UIView setAnimationDuration:duration ];
-	}
+	self.frame = CGRectMake( x, self.frame.origin.y, self.frame.size.width, self.frame.size.height );
+}
+
+- ( void )setFrameY:( CGFloat )y
+{
+	self.frame = CGRectMake( self.frame.origin.x, y, self.frame.size.width, self.frame.size.height );
+}
+
+- ( void )setFrameWidth:( CGFloat )width
+{
+	self.frame = CGRectMake( self.frame.origin.x, self.frame.origin.y, width, self.frame.size.height );
+}
+
+- ( void )setFrameHeight:( CGFloat )height
+{
+	self.frame = CGRectMake( self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height );
+}
+
+- ( void )shiftFrameX:( CGFloat )x
+{
+	self.frame = CGRectMake( ( self.frame.origin.x + x ), self.frame.origin.y, self.frame.size.width, self.frame.size.height );
+}
+
+- ( void )shiftFrameY:( CGFloat )y
+{
+	self.frame = CGRectMake( self.frame.origin.x, ( self.frame.origin.y + y ), self.frame.size.width, self.frame.size.height );
+}
+
+- ( void )shiftFrameWidth:( CGFloat )width
+{
+	self.frame = CGRectMake( self.frame.origin.x, self.frame.origin.y, ( self.frame.size.width + width ), self.frame.size.height );
+}
+
+- ( void )shiftFrameHeight:( CGFloat )height
+{
+	self.frame = CGRectMake( self.frame.origin.x, self.frame.origin.y, self.frame.size.width, ( self.frame.size.height + height ) );
+}
+
+- ( void )setFrameX:( CGFloat )x animatedForDuration:( NSTimeInterval )duration
+{
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration ];
 	
 	self.frame = CGRectMake( x, self.frame.origin.y, self.frame.size.width, self.frame.size.height );
-	
-	if ( animated )
-	{
-		[ UIView commitAnimations ];
-	}
+
+	[ UIView commitAnimations ];
 }
 
-// setFrameY:animted:duration:
-//
-// This method "changes" this view's frame's y coordinate to the value of the "y" parameter by creating a new CGRect with all other CGRectMake() 
-// function parameters being the same as the current frame. Animation is optionally applied.
-
-- ( void )setFrameY:( CGFloat )y animated:( BOOL )animated  duration:( NSTimeInterval )duration
+- ( void )setFrameY:( CGFloat )y animatedForDuration:( NSTimeInterval )duration
 {
-	if ( animated )
-	{
-		[ UIView beginAnimations ];
-		[ UIView setAnimationDuration:duration ];
-	}
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration ];
 	
 	self.frame = CGRectMake( self.frame.origin.x, y, self.frame.size.width, self.frame.size.height );
-	
-	if ( animated )
-	{
-		[ UIView commitAnimations ];
-	}
+
+	[ UIView commitAnimations ];
 }
 
-// setFrameWidth:animted:duration:
-//
-// This method "changes" this view's frame's width to the value of the "width" parameter by creating a new CGRect with all other CGRectMake() 
-// function parameters being the same as the current frame. Animation is optionally applied.
-
-- ( void )setFrameWidth:( CGFloat )width animated:( BOOL )animated  duration:( NSTimeInterval )duration
+- ( void )setFrameWidth:( CGFloat )width animatedForDuration:( NSTimeInterval )duration
 {
-	if ( animated )
-	{
-		[ UIView beginAnimations ];
-		[ UIView setAnimationDuration:duration ];
-	}
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration ];
 	
 	self.frame = CGRectMake( self.frame.origin.x, self.frame.origin.y, width, self.frame.size.height );
 	
-	if ( animated )
-	{
-		[ UIView commitAnimations ];
-	}
+	[ UIView commitAnimations ];
 }
 
-// setFrameHeight:animted:duration:
-//
-// This method "changes" this view's frame's height to the value of the "height" parameter by creating a new CGRect with all other CGRectMake() 
-// function parameters being the same as the current frame. Animation is optionally applied.
-
-- ( void )setFrameHeight:( CGFloat )height animated:( BOOL )animated  duration:( NSTimeInterval )duration
+- ( void )setFrameHeight:( CGFloat )height animatedForDuration:( NSTimeInterval )duration
 {
-	if ( animated )
-	{
-		[ UIView beginAnimations ];
-		[ UIView setAnimationDuration:duration ];
-	}
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration ];
 	
 	self.frame = CGRectMake( self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height );
 	
-	if ( animated )
-	{
-		[ UIView commitAnimations ];
-	}
+	[ UIView commitAnimations ];
 }
 
-// shiftFrameX:animted:duration:
-//
-// This method "shift" this view's frame's x coordinate by the value of the "x" parameter by creating a new CGRect with all other CGRectMake() 
-// function parameters being the same as the current frame. Animation is optionally applied.
-
-- ( void )shiftFrameX:( CGFloat )x animated:( BOOL )animated  duration:( NSTimeInterval )duration
+- ( void )shiftFrameX:( CGFloat )x animatedForDuration:( NSTimeInterval )duration
 {
-	if ( animated )
-	{
-		[ UIView beginAnimations ];
-		[ UIView setAnimationDuration:duration ];
-	}
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration ];
 	
 	self.frame = CGRectMake( ( self.frame.origin.x + x ), self.frame.origin.y, self.frame.size.width, self.frame.size.height );
 	
-	if ( animated )
-	{
-		[ UIView commitAnimations ];
-	}
+	[ UIView commitAnimations ];
 }
 
-// shiftFrameY:animted:duration:
-//
-// This method "shift" this view's frame's y coordinate by the value of the "y" parameter by creating a new CGRect with all other CGRectMake() 
-// function parameters being the same as the current frame. Animation is optionally applied.
-
-- ( void )shiftFrameY:( CGFloat )y animated:( BOOL )animated  duration:( NSTimeInterval )duration
+- ( void )shiftFrameY:( CGFloat )y animatedForDuration:( NSTimeInterval )duration
 {
-	if ( animated )
-	{
-		[ UIView beginAnimations ];
-		[ UIView setAnimationDuration:duration ];
-	}
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration ];
 	
 	self.frame = CGRectMake( self.frame.origin.x, ( self.frame.origin.y + y ), self.frame.size.width, self.frame.size.height );
 	
-	if ( animated )
-	{
-		[ UIView commitAnimations ];
-	}
+	[ UIView commitAnimations ];
 }
 
-// shiftFrameWidth:animted:duration:
-//
-// This method "shift" this view's frame's width by the value of the "width" parameter by creating a new CGRect with all other CGRectMake() 
-// function parameters being the same as the current frame. Animation is optionally applied.
-
-- ( void )shiftFrameWidth:( CGFloat )width animated:( BOOL )animated  duration:( NSTimeInterval )duration
+- ( void )shiftFrameWidth:( CGFloat )width animatedForDuration:( NSTimeInterval )duration
 {
-	if ( animated )
-	{
-		[ UIView beginAnimations ];
-		[ UIView setAnimationDuration:duration ];
-	}
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration ];
 	
 	self.frame = CGRectMake( self.frame.origin.x, self.frame.origin.y, ( self.frame.size.width + width ), self.frame.size.height );
 	
-	if ( animated )
-	{
-		[ UIView commitAnimations ];
-	}
+	[ UIView commitAnimations ];
 }
 
-// shiftFrameHeight:animted:duration:
-//
-// This method "shift" this view's frame's height by the value of the "height" parameter by creating a new CGRect with all other CGRectMake() 
-// function parameters being the same as the current frame. Animation is optionally applied.
-
-		 - ( void )shiftFrameHeight:( CGFloat )height animated:( BOOL )animated  duration:( NSTimeInterval )duration
+- ( void )shiftFrameHeight:( CGFloat )height animatedForDuration:( NSTimeInterval )duration
 {
-	if ( animated )
-	{
-		[ UIView beginAnimations ];
-		[ UIView setAnimationDuration:duration ];
-	}
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration ];
 	
 	self.frame = CGRectMake( self.frame.origin.x, self.frame.origin.y, self.frame.size.width, ( self.frame.size.height + height ) );
 	
-	if ( animated )
-	{
-		[ UIView commitAnimations ];
-	}
+	[ UIView commitAnimations ];
 }
-
-// beginAnimations
-//
-// This method merely calls beginAnimations:context: with nil and NULL parameters, respectively.
 
 + ( void )beginAnimations
 {
