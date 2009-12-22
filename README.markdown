@@ -10,7 +10,7 @@ Note: The classes provided here were created as generically as possible. However
 
 Currently, the following custom classes are available:
 
-- [**STPickerView**](#stpickerview): A subclass of `UIPickerView` that easily allows you to create slide-up/slide-down picker views similar to those found in Mobile Safari.
+- [**STPickerView**](#stpickerview): A custom implementation of `UIPickerView` that easily allows you to create slide-up/slide-down picker views similar to those found in Mobile Safari.
 
 Currently, the following categories are available:
 
