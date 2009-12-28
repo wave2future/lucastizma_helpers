@@ -108,7 +108,7 @@ For example, compare
     Person * thirdPerson  = [ [ Person alloc ] initWithName:@"Ninten" homeTown:@"Podunk" ];
 
     NSArray * arrayToBeSorted = [ NSArray arrayWithObjects:firstPerson, secondPerson, thirdPerson, nil ];
-    NSMutableArray * sortDescriptors = [ NSMutableArray arrayWithCapacity:3 ];
+    NSMutableArray * sortDescriptors = [ NSMutableArray arrayWithCapacity:2 ];
 
     [ sortDescriptors addObject:[ [ [ NSSortDescriptor alloc ] initWithKey:@"homeTown" ascending:YES ] autorelease ] ];
     [ sortDescriptors addObject:[ [ [ NSSortDescriptor alloc ] initWithKey:@"name" ascending:YES ] autorelease ] ];
