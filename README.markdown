@@ -336,7 +336,7 @@ For example,
 	[ UITextField padCaptions:self.emailTextField, self.userNameTextField, self.fullNameTextField,
 	  self.passwordTextField, self.confirmTextField, nil ];
 	
-produces the result in the sample image above. Because the "User Name" text field has the widest caption, the caption's width is used to add additional spaces to the rest of the text field captions.
+produces the result in the sample image above. Because the "User Name" text field has the widest caption, its caption's width is used to add additional spacing to the rest of the text field captions so that all text field captions have the same width.
 
 UIView+STAdditions<a name="uiview+stadditions"></a>
 ------------------
