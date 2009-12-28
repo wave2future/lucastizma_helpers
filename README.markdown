@@ -1,6 +1,13 @@
 Spot Trot Helpers<a name=top></a>
 =================
 
+Change Log
+----------
+
+Nontrivial changes to this repository will typically be logged here.
+
+- **12/28/2009 3:20 PM**: Added `UILabel+STAdditions`.
+
 Overview
 --------
 
@@ -258,7 +265,7 @@ Calling
 
     [ UILabel label ];
 
-if the same as calling
+is the same as calling
 
     [ [ [ UILabel alloc ] init ] autorelease ];
 
@@ -374,8 +381,3 @@ For example, compare
 with the functionally identical yet syntactically more succinct
 
 	[ someView shiftFrameX:40.0 animatedForDuration:0.5 ];
-	
-Change Log
-----------
-
-- **12/28/2009 3:20 PM**: Added `UILabel+STAdditions`.
