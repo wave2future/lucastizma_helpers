@@ -20,6 +20,7 @@ Currently, the following categories are available:
 - [**NSString+STAdditions**](#nsstring+stadditions): Contains a handful of helpful string method, mostly for syntactical convenience.
 - [**UIActionSheet+STAdditions**](#uiactionsheet+stadditions): Contains a method for showing a standard "Yes"/"No" action sheet in the key window.
 - [**UIAlertView+STAdditions**](#uialertview+stadditions): Contains methods for showing a standard "OK" alert view.
+- [**UILabel+STAdditions**](#uilabel+stadditions): Contains a method to create an autoreleased label.
 - [**UITableView+STAdditions**](#uitableview+stadditions): Contains methods for creating new or reusable table view cells based on either a string identifier or class.
 - [**UITextField+STAdditions**](#uitextfield+stadditions): Contains methods for adding and padding text field "captions".
 - [**UIView+STAdditions**](#uiview+stadditions): Contains a handful of helpful view methods to modify frames, mostly for syntactical convenience.
@@ -241,6 +242,26 @@ with the functionally identical yet syntactically more succinct
 
 	[ UIAlertView showStandardAlertViewWithTitle:@"Alert View" message:@"This is a simple alert view. Tap \"OK\"." ];
 
+UILabel+STAdditions<a name="uilabel+stadditions"></a>
+-------------------
+[(back to top)](#top)
+
+### UILabel+STAdditions Methods ###
+
+    + ( id )label;
+
+*This class should not contain any implementation-specific details.*
+
+`UILabel+STAdditions` simply provides a convenience class method to create an autoreleased label.
+
+Calling
+
+    [ UILabel label ];
+
+if the same as calling
+
+    [ [ [ UILabel alloc ] init ] autorelease ];
+
 UITableView+STAdditions<a name="uitableview+stadditions"></a>
 -----------------------
 [(back to top)](#top)
@@ -353,3 +374,8 @@ For example, compare
 with the functionally identical yet syntactically more succinct
 
 	[ someView shiftFrameX:40.0 animatedForDuration:0.5 ];
+	
+Change Log
+----------
+
+- **12/28/2009 3:20 PM**: Added `UILabel+STAdditions`.
