@@ -77,7 +77,7 @@ STViewController<a name="stviewcontroller"></a>
 
 *This class should not contain any implementation-specific details.*
 
-`STViewController` currently has only one method, `dismissKeyboard`, which effectively hides the on-screen keyboard if it is being displayed. This is done by inspecting all of this class's properties (including all properties defined by any superclass or subclass) and asking for those that respond to the `isFirstResponder` selector. Any that are found are passed the `resignFirstResponder` message, which hides the keyboard as a side effect.
+`STViewController` currently has only one method, `dismissKeyboard`, which effectively hides the on-screen keyboard if it is being displayed. This is done by inspecting all of this class's properties (including all properties defined by any superclass or subclass) and asking for those that respond to the `isFirstResponder` selector. Any that are found are passed the `resignFirstResponder` message, which hides the keyboard as a side effect. In actuality, there can only be one first responder because of Cocoa's responder chain paradigm, so continuing to check for a first responder after having already encountered one is not necessary.
 
 CATransition+STAdditions<a name="catransition+stadditions"></a>
 ------------------------
