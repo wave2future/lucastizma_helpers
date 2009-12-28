@@ -6,6 +6,7 @@ Change Log
 
 Nontrivial changes to this repository will typically be logged here.
 
+- **12/28/2009 6:41 PM**: Added `STViewController`.
 - **12/28/2009 3:20 PM**: Added `UILabel+STAdditions`.
 
 Overview
@@ -18,6 +19,10 @@ Note: The classes provided here were created as generically as possible. However
 Currently, the following custom classes are available:
 
 - [**STPickerView**](#stpickerview): A custom implementation of `UIPickerView` that easily allows you to create slide-up/slide-down picker views similar to those found in Mobile Safari.
+
+Currently, the following UIKit subclasses are available:
+
+- [**STViewController**](#stviewcontroller): A subclass of `UIViewController` that provides various view controller convenience methods.
 
 Currently, the following categories are available:
 
@@ -61,6 +66,18 @@ STPickerView<a name="stpickerview"></a>
 Classes which make use of `STPickerView` should conform to the `STPickerViewDelegate` and `UIPickerViewDataSource` protocols. `STPickerView` will send callbacks to its delegate whenever the *Pick* or *Cancel* buttons are pressed, via `pickerView:didPickRows:` and `pickerViewDidCancel`, respectively. Pressing either button also hides the picker view. For now, `STPickerView` adds two buttons to its button toolbar: *Pick* and *Cancel*. **It is assumed that there are image assets named `picker-button-pick.png` and `picker-button-cancel.png` to be used as button graphics.**
 
 `STPickerView` supports multi-row pickers, and `pickerView:didPickRows:` provides the delegate with an array of `NSNumber`s (as `NSInteger`s) that represent the selected rows of each component. For example, in a three-component picker view, `pickerView:didPickRows:` might provide the following array: `[ 2, 0, 5 ]`. These means that the third, first, and sixth rows were selected from components one, two, and three, respectively.
+
+STViewController<a name="stviewcontroller"></a>
+----------------
+[(back to top)](#top)
+
+### STViewController Methods ###
+
+    - ( void )dismissKeyboard;
+
+*This class should not contain any implementation-specific details.*
+
+`STViewController` currently has only one method, `dismissKeyboard`, which effectively hides the on-screen keyboard if it is being displayed. This is done by inspecting all of this class's properties (including all properties defined by any superclass or subclass) and asking for those that respond to the `isFirstResponder` selector. Any that are found are passed the `resignFirstResponder` message, which hides the keyboard as a side effect.
 
 CATransition+STAdditions<a name="catransition+stadditions"></a>
 ------------------------
