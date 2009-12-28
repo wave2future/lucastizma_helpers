@@ -169,6 +169,22 @@ NSString+STAdditions<a name="nsstring+stadditions"></a>
 *This class should not contain any implementation-specific details.*
 
 `NSString+STAdditions` contains a few helper methods, mostly used to clean up syntax. `dashedString` lowercases a string and replaces all spaces " " with dashes "-". `isEmpty` checks for various conditions by which an `NSString` instance is typically considered to be empty: if it equals `@""`, `@"<null>"`, or `@"(null)"`. `isNotEqualToString:` and `isNotEmpty` are the logical inverses of `isEqualToString:` and `isEmpty`, respectively.
+	
+In my opinion,
+
+    if ( [ someString isNotEqualToString:@"Ninten, Ness, and Lucas are pals." ] )
+    {
+	    // Do something...
+    }
+
+is a little cleaner syntactically than
+
+	if ( ! [ someString isEqualToString:@"Ninten, Ness, and Lucas are pals." ] )
+    {
+	    // Do something...
+    }
+
+especially when chaining together multiple boolean expressions.
 
 UIActionSheet+STAdditions<a name="uiactionsheet+stadditions"></a>
 -------------------------
