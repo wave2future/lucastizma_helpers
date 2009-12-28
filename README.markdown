@@ -58,6 +58,15 @@ CATransition+STAdditions<a name="catransition+stadditions"></a>
 ------------------------
 [(back to top)](#top)
 
+### CATransition+STAdditions Methods ###
+
+    + ( void )animationWithType:( NSString * )type subtype:( NSString * )subtype duration:( CFTimeInterval )duration
+		 timingFunctionWithName:( NSString * )timingFunctionName onLayer:( CALayer * )layer;
+	+ ( void )standardFadeAnimationOnLayer:( CALayer * )layer;
+	+ ( void )standardMoveInAnimationWithSubtype:( NSString * )subtype onLayer:( CALayer * )layer;
+	+ ( void )standardPushAnimationWithSubtype:( NSString * )subtype onLayer:( CALayer * )layer;
+	+ ( void )standardRevealAnimationWithSubtype:( NSString * )subtype onLayer:( CALayer * )layer;
+
 *This class should not contain any implementation-specific details.*
 
 `CATransition+STAdditions` was created to allow for `CATransition`-based layer animations to be created quickly and easily. It also allows for even easier creation of "standard" animations (default duration and timing function values).
