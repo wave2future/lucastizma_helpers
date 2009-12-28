@@ -121,10 +121,10 @@ with the functionally similar yet syntactically more succinct
     Person * secondPerson = [ [ Person alloc ] initWithName:@"Ana" homeTown:@"Snow Man" ];
     Person * thirdPerson  = [ [ Person alloc ] initWithName:@"Ninten" homeTown:@"Podunk" ];
 
-    NSArray * sortedArray = [ [ NSArray arrayWithObjects:firstPerson, secondPerson, thirdPerson, nil ]
-						   sortedArrayWithDescriptorKeys:[ NSArray arrayWithObjects:@"homeTown", @"name", nil ] ascending:YES ];
+	NSArray * arrayToBeSorted = [ NSArray arrayWithObjects:firstPerson, secondPerson, thirdPerson, nil ];
+    NSArray * sortedArray = [ arrayToBeSorted sortedArrayWithDescriptorKeys:[ NSArray arrayWithObjects:@"homeTown", @"name", nil ] ascending:YES ];
 						
-Both code snippets result in the same sorted array (e.g., `[ "Ninten from Podunk", "Pippi from Podunk", "Ana from Snow Man" ]` ), yet the second one is shorter. Note that these convenience methods require that all sort descriptors use the same sort order, provided by the `ascending` parameter.
+Both code snippets result in the same sorted array (e.g., `[ "Ninten from Podunk", "Pippi from Podunk", "Ana from Snow Man" ]` ), yet the second one is a little shorter. Note that these convenience methods require that all sort descriptors use the same sort order, provided by the `ascending` parameter.
 
 NSBundle+STAdditions<a name="nsbundle+stadditions"></a>
 --------------------
