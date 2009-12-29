@@ -77,7 +77,35 @@ STViewController<a name="stviewcontroller"></a>
 
 *This class should not contain any implementation-specific details.*
 
-`STViewController` currently has only one method, `dismissKeyboard`, which effectively hides the on-screen keyboard if it is being displayed. This is done by inspecting all of this class's properties (including all properties defined by any superclass or subclass) and asking for those that respond to the `isFirstResponder` selector. Any that are found are passed the `resignFirstResponder` message, which hides the keyboard as a side effect. In actuality, there can only be one first responder because of Cocoa's responder chain paradigm, so continuing to check for a first responder after having already encountered one is not necessary.
+`STViewController`, which is a subclass of `UIViewController`, currently has only one method, `dismissKeyboard`, which effectively hides the on-screen keyboard if it is being displayed. This is done by inspecting all of this class's properties (including all properties defined by any superclass or subclass) and asking for those that respond to the `isFirstResponder` selector. Any that are found are passed the `resignFirstResponder` message, which hides the keyboard as a side effect. In actuality, there can only be one first responder because of Cocoa's responder chain design paradigm, so continuing to check for a first responder after having already encountered one is not necessary.
+
+This method is convenient when you either don't know or don't care to manage any number of UI elements that can display the keyboard. Normally, something like the following is necessary:
+
+    - ( BOOL )textFieldShouldReturn:( UITextField * )textField
+    {
+	    // Want to hide the keyboard now that the user is done...
+	    
+	    [ self.someTextField1 resignFirstResponder ];
+	    [ self.someTextField2 resignFirstResponder ];
+	    [ self.someTextField3 resignFirstResponder ];
+	    [ self.someTextField4 resignFirstResponder ];
+	    [ self.someTextField5 resignFirstResponder ];
+	    [ self.someTextField6 resignFirstResponder ];
+	
+	    // ...
+    }
+
+If a particular view has only one or two UI objects that can become the first responder (e.g., UITextField), then it's not too troublesome to manually resign all of them. However, in the case where you either have too many objects to manage or, worse, you have to deal with dynamically generated objects, it's much easier to do the following:
+
+	- ( BOOL )textFieldShouldReturn:( UITextField * )textField
+	{
+	    // Want to hide the keyboard now that the user is done...
+	    // 'self' is of type STViewController
+    
+	    [ self dismissKeyboard ];
+
+	    // ...
+	}
 
 CATransition+STAdditions<a name="catransition+stadditions"></a>
 ------------------------
