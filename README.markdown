@@ -6,6 +6,7 @@ Change Log
 
 Nontrivial changes to this repository will typically be logged here.
 
+- **12/29/2009 12:33 PM**: Expanded the discussion of `STViewController`'s `dismissKeyboard` method.
 - **12/28/2009 6:41 PM**: Added `STViewController`.
 - **12/28/2009 3:20 PM**: Added `UILabel+STAdditions`.
 
