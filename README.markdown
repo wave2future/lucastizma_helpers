@@ -81,9 +81,9 @@ STViewController<a name="stviewcontroller"></a>
 
 This method is convenient when you either don't know or don't care to manage any number of UI elements that can display the keyboard. Normally, something like the following is necessary:
 
-    - ( BOOL )textFieldShouldReturn:( UITextField * )textField
+    - ( void )someActionOccurred
     {
-	    // Want to hide the keyboard now that the user is done...
+	    // Want to hide the keyboard if it's being displayed...
 	    
 	    [ self.someTextField1 resignFirstResponder ];
 	    [ self.someTextField2 resignFirstResponder ];
@@ -97,9 +97,9 @@ This method is convenient when you either don't know or don't care to manage any
 
 If a particular view has only one or two UI objects that can become the first responder (e.g., UITextField), then it's not too troublesome to manually resign all of them. However, in the case where you either have too many objects to manage or, worse, you have to deal with dynamically generated objects, it's much easier to do the following:
 
-	- ( BOOL )textFieldShouldReturn:( UITextField * )textField
-	{
-	    // Want to hide the keyboard now that the user is done...
+	- ( void )someActionOccurred
+    {
+	    // Want to hide the keyboard if it's being displayed...
 	    // 'self' is of type STViewController
     
 	    [ self dismissKeyboard ];
