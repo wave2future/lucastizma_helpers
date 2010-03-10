@@ -1,5 +1,5 @@
 //
-//  NSArray+STAdditions.m
+//  NSArray+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "NSArray+STAdditions.h"
+#import "NSArray+LTAdditions.h"
 
-@implementation NSArray ( STAdditions )
+@implementation NSArray ( LTAdditions )
 
 #pragma mark -
-#pragma mark NSArray ( STAdditions ) Category Methods
+#pragma mark NSArray ( LTAdditions ) Category Methods
 
 - ( NSArray * )sortedArrayWithDescriptorKey:( NSString * )key ascending:( BOOL )ascending
 {

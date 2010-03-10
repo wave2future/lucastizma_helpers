@@ -1,5 +1,5 @@
 //
-//  NSString+STAdditions.m
+//  NSString+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "NSString+STAdditions.h"
+#import "NSString+LTAdditions.h"
 
-@implementation NSString ( STAdditions )
+@implementation NSString ( LTAdditions )
 
 #pragma mark -
-#pragma mark NSString ( STAdditions ) Category Methods
+#pragma mark NSString ( LTAdditions ) Category Methods
 
 // dashedString
 // 

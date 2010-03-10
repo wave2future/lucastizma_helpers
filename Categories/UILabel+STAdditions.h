@@ -1,5 +1,5 @@
 //
-//  UILabel+STAdditions.h
+//  UILabel+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UILabel ( STAdditions )
+@interface UILabel ( LTAdditions )
 
 + ( id )label;
 

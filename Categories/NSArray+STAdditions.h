@@ -1,5 +1,5 @@
 //
-//  NSArray+STAdditions.h
+//  NSArray+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray ( STAdditions )
+@interface NSArray ( LTAdditions )
 
 - ( NSArray * )sortedArrayWithDescriptorKey:( NSString * )key ascending:( BOOL )ascending;
 - ( NSArray * )sortedArrayWithDescriptorKeys:( NSArray * )keys ascending:( BOOL )ascending;

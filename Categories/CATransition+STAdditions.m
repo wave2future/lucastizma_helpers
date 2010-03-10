@@ -1,5 +1,5 @@
 //
-//  CATransition+STAdditions.m
+//  CATransition+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "CATransition+STAdditions.h"
+#import "CATransition+LTAdditions.h"
 
-@implementation CATransition ( STAdditions )
+@implementation CATransition ( LTAdditions )
 
 #pragma mark -
-#pragma mark CATransition ( STAdditions ) Category Methods
+#pragma mark CATransition ( LTAdditions ) Category Methods
 
 // animationWithType:subtype:duration:timingFunctionWithName:onLayer:
 // 

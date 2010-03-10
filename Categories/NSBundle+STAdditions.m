@@ -1,5 +1,5 @@
 //
-//  NSBundle+STAdditions.m
+//  NSBundle+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "NSBundle+STAdditions.h"
+#import "NSBundle+LTAdditions.h"
 
-@implementation NSBundle ( STAdditions )
+@implementation NSBundle ( LTAdditions )
 
 #pragma mark -
-#pragma mark NSBundle ( STAdditions ) Category Methods
+#pragma mark NSBundle ( LTAdditions ) Category Methods
 
 - ( BOOL )resourceExistsWithFileName:( NSString * )fileName
 {

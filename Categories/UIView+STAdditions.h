@@ -1,5 +1,5 @@
 //
-//  UIView+STAdditions.h
+//  UIView+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView ( STAdditions )
+@interface UIView ( LTAdditions )
 
 - ( void )setFrameX:( CGFloat )x;
 - ( void )setFrameY:( CGFloat )y;

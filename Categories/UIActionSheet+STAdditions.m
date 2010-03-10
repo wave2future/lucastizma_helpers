@@ -1,5 +1,5 @@
 //
-//  UIActionSheet+STAdditions.m
+//  UIActionSheet+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "UIActionSheet+STAdditions.h"
+#import "UIActionSheet+LTAdditions.h"
 
-@implementation UIActionSheet ( STAdditions )
+@implementation UIActionSheet ( LTAdditions )
 
 #pragma mark -
-#pragma mark UIActionSheet ( STAdditions ) Category Methods
+#pragma mark UIActionSheet ( LTAdditions ) Category Methods
 
 + ( void )showYesNoActionSheetWithTitle:( NSString * )title delegate:( id )delegate
 {

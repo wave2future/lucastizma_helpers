@@ -1,5 +1,5 @@
 //
-//  UITableView+STAdditions.h
+//  UITableView+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
  
 #import <UIKit/UIKit.h>
  
-@interface UITableView ( STAdditions )
+@interface UITableView ( LTAdditions )
  
 - ( UITableViewCell * )createNewCellWithNibName:( NSString * )nibName;
 - ( UITableViewCell * )createNewCellWithClass:( Class )class;

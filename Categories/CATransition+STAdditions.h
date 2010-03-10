@@ -1,5 +1,5 @@
 //
-//  CATransition+STAdditions.h
+//  CATransition+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface CATransition ( STAdditions )
+@interface CATransition ( LTAdditions )
 
 + ( void )animationWithType:( NSString * )type subtype:( NSString * )subtype duration:( CFTimeInterval )duration
 	 timingFunctionWithName:( NSString * )timingFunctionName onLayer:( CALayer * )layer;

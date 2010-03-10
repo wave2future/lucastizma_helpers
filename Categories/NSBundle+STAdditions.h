@@ -1,5 +1,5 @@
 //
-//  NSBundle+STAdditions.h
+//  NSBundle+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSBundle ( STAdditions )
+@interface NSBundle ( LTAdditions )
 
 - ( BOOL )resourceExistsWithFileName:( NSString * )fileName;
 

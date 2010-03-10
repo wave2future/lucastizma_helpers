@@ -1,5 +1,5 @@
 //
-//  UIAlertView+STAdditions.m
+//  UIAlertView+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "UIAlertView+STAdditions.h"
+#import "UIAlertView+LTAdditions.h"
 
-@implementation UIAlertView ( STAdditions )
+@implementation UIAlertView ( LTAdditions )
 
 #pragma mark -
-#pragma mark UIAlertView ( STAdditions ) Category Methods
+#pragma mark UIAlertView ( LTAdditions ) Category Methods
 
 + ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message
 {

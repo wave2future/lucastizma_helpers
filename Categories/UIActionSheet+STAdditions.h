@@ -1,5 +1,5 @@
 //
-//  UIActionSheet+STAdditions.h
+//  UIActionSheet+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIActionSheet ( STAdditions )
+@interface UIActionSheet ( LTAdditions )
 
 + ( void )showYesNoActionSheetWithTitle:( NSString * )title delegate:( id )delegate;
 

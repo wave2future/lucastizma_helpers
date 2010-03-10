@@ -1,5 +1,5 @@
 //
-//  NSString+STAdditions.h
+//  NSString+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString ( STAdditions )
+@interface NSString ( LTAdditions )
 
 - ( NSString * )dashedString;
 - ( BOOL )isNotEqualToString:( NSString * )string;

@@ -1,5 +1,5 @@
 //
-//  UIAlertView+STAdditions.h
+//  UIAlertView+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIAlertView ( STAdditions )
+@interface UIAlertView ( LTAdditions )
 
 + ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message;
 + ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message delegate:( id )delegate;

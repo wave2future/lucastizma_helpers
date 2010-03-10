@@ -1,51 +1,52 @@
-Spot Trot Helpers<a name=top></a>
-=================
+LucasTizma Helpers<a name=top></a>
+==================
 
 Change Log
 ----------
 
 Nontrivial changes to this repository will typically be logged here.
 
+- **03/10/2010 4:44 PM**: Rebranded the project as LucasTizma Helpers.
 - **03/10/2010 2:57 PM**: Added the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) to every file header.
-- **12/29/2009 12:33 PM**: Expanded the discussion of `STViewController`'s `dismissKeyboard` method.
-- **12/28/2009 6:41 PM**: Added `STViewController`.
-- **12/28/2009 3:20 PM**: Added `UILabel+STAdditions`.
+- **12/29/2009 12:33 PM**: Expanded the discussion of `LTViewController`'s `dismissKeyboard` method.
+- **12/28/2009 6:41 PM**: Added `LTViewController`.
+- **12/28/2009 3:20 PM**: Added `UILabel+LTAdditions`.
 
 Overview
 --------
 
-This repository hosts various Objective-C helper classes and categories that were created to assist in the development of [Spot Trot](http://www.spottrot.com/) iPhone applications. While many contain implementation-specific details, the general ideas and class structures are generic enough to perhaps be useful to other people.
+This repository hosts various Objective-C helper classes and categories that were created to assist in the development of iPhone applications. While some contain implementation-specific details, the general ideas and class structures are generic enough to perhaps be useful to other people. Eventually, I will eradicate all project-specific references and make these classes completely generic.
 
-Note: The classes provided here were created as generically as possible. However, there are some implementation-specific details included in many or all of them, most of which are dependent upon these classes being used in the context of a Spot Trot project. **In other words, it is highly unlikely that some of these classes can be used standalone without some modification.** I will try to point out these cases where appropriate (usually in bold). Feel free to fork this project or suggest modifications as I am always in search of ways to make my code more extensible, usable, stable, and flexible.
+Note: The classes provided here were created as generically as possible. However, there are some implementation-specific details included in some of them, most of which are dependent upon these classes being used in the context of a particular project. **In other words, it is highly unlikely that some of these classes can be used standalone without some modification.** I will try to point out these cases where appropriate (usually in bold). Feel free to fork this project or suggest modifications as I am always in search of ways to make my code more extensible, usable, stable, and flexible.
 
 Currently, the following custom classes are available:
 
-- [**STPickerView**](#stpickerview): A custom implementation of `UIPickerView` that easily allows you to create slide-up/slide-down picker views similar to those found in Mobile Safari.
+- [**LTPickerView**](#ltpickerview): A custom implementation of `UIPickerView` that easily allows you to create slide-up/slide-down picker views similar to those found in Mobile Safari.
 
 Currently, the following UIKit subclasses are available:
 
-- [**STViewController**](#stviewcontroller): A subclass of `UIViewController` that provides various view controller convenience methods.
+- [**LTViewController**](#ltviewcontroller): A subclass of `UIViewController` that provides various view controller convenience methods.
 
 Currently, the following categories are available:
 
-- [**CATransition+STAdditions**](#catransition+stadditions): Contains methods for setting up `CATransition` animations easily.
-- [**NSArray+STAdditions**](#nsarray+stadditions): Contains methods for sorting arrays using descriptor keys, mostly for syntactical convenience.
-- [**NSBundle+STAdditions**](#nsbundle+stadditions): Contains a method for checking if a resource exists in the main resource bundle, mostly for syntactical convenience.
-- [**NSString+STAdditions**](#nsstring+stadditions): Contains a handful of helpful string method, mostly for syntactical convenience.
-- [**UIActionSheet+STAdditions**](#uiactionsheet+stadditions): Contains a method for showing a standard "Yes"/"No" action sheet in the key window.
-- [**UIAlertView+STAdditions**](#uialertview+stadditions): Contains methods for showing a standard "OK" alert view.
-- [**UILabel+STAdditions**](#uilabel+stadditions): Contains a method to create an autoreleased label.
-- [**UITableView+STAdditions**](#uitableview+stadditions): Contains methods for creating new or reusable table view cells based on either a string identifier or class.
-- [**UITextField+STAdditions**](#uitextfield+stadditions): Contains methods for adding and padding text field "captions".
-- [**UIView+STAdditions**](#uiview+stadditions): Contains a handful of helpful view methods to modify frames, mostly for syntactical convenience.
+- [**CATransition+LTAdditions**](#catransition+ltadditions): Contains methods for setting up `CATransition` animations easily.
+- [**NSArray+LTAdditions**](#nsarray+ltadditions): Contains methods for sorting arrays using descriptor keys, mostly for syntactical convenience.
+- [**NSBundle+LTAdditions**](#nsbundle+ltadditions): Contains a method for checking if a resource exists in the main resource bundle, mostly for syntactical convenience.
+- [**NSString+LTAdditions**](#nsstring+ltadditions): Contains a handful of helpful string method, mostly for syntactical convenience.
+- [**UIActionSheet+LTAdditions**](#uiactionsheet+ltadditions): Contains a method for showing a standard "Yes"/"No" action sheet in the key window.
+- [**UIAlertView+LTAdditions**](#uialertview+ltadditions): Contains methods for showing a standard "OK" alert view.
+- [**UILabel+LTAdditions**](#uilabel+ltadditions): Contains a method to create an autoreleased label.
+- [**UITableView+LTAdditions**](#uitableview+ltadditions): Contains methods for creating new or reusable table view cells based on either a string identifier or class.
+- [**UITextField+LTAdditions**](#uitextfield+ltadditions): Contains methods for adding and padding text field "captions".
+- [**UIView+LTAdditions**](#uiview+ltadditions): Contains a handful of helpful view methods to modify frames, mostly for syntactical convenience.
 
-STPickerView<a name="stpickerview"></a>
+LTPickerView<a name="ltpickerview"></a>
 ------------
 [(back to top)](#top)
 
-![STPickerView](http://farm3.static.flickr.com/2793/4194762407_28f9e5f9e1.jpg "STPickerView")
+![LTPickerView](http://farm3.static.flickr.com/2793/4194762407_28f9e5f9e1.jpg "LTPickerView")
 
-### STPickerView Methods ###
+### LTPickerView Methods ###
 
     - ( void )selectRow:( NSInteger )row inComponent:( NSInteger )component animated:( BOOL )animated;
     - ( void )pickButtonPressed;
@@ -54,32 +55,32 @@ STPickerView<a name="stpickerview"></a>
     - ( void )hide;
     - ( void )animationDidStop:( NSString * )animationID finished:( NSNumber * )finished context:( void * )context;
 
-### STPickerViewDelegate Methods ###
+### LTPickerViewDelegate Methods ###
 
     - ( void )pickerView:( UIPickerView * )pickerView didPickRows:( NSArray * )rows;
     - ( void )pickerViewDidCancel:( UIPickerView * )pickerView;
 
 *This class probably contains implementation-specific details, most (if not all) of which are indicated in ***bold*** below.*
 
-`STPickerView` was created because `UIPickerView` does not naturally facilitate picker views that can be easily shown (slide-up) and hidden (slide-down) without manually implementing view hiding. It also includes a button toolbar similar to how `UIPickerView` does in Mobile Safari.
+`LTPickerView` was created because `UIPickerView` does not naturally facilitate picker views that can be easily shown (slide-up) and hidden (slide-down) without manually implementing view hiding. It also includes a button toolbar similar to how `UIPickerView` does in Mobile Safari.
 
-`STPickerView` has a very simple implementation. Once initialized with `UIView`'s `initWithFrame:` method and assigned a delegate and data source, you just call `show` and `hide` to slide-up and slide-down the picker view, respectively. In its current implementation, you do not add your instance of `STPickerView` as a subview to any view. **Instead, `STPickerView` adds itself (hidden) to the view of the selected view controller of a tab bar controller, which is assumed to be attached to the app delegate. This is implementation specific and needs to be changed.**
+`LTPickerView` has a very simple implementation. Once initialized with `UIView`'s `initWithFrame:` method and assigned a delegate and data source, you just call `show` and `hide` to slide-up and slide-down the picker view, respectively. In its current implementation, you do not add your instance of `LTPickerView` as a subview to any view. **Instead, `LTPickerView` adds itself (hidden) to the view of the selected view controller of a tab bar controller, which is assumed to be attached to the app delegate. This is implementation specific and needs to be changed.**
 
-Classes which make use of `STPickerView` should conform to the `STPickerViewDelegate` and `UIPickerViewDataSource` protocols. `STPickerView` will send callbacks to its delegate whenever the *Pick* or *Cancel* buttons are pressed, via `pickerView:didPickRows:` and `pickerViewDidCancel`, respectively. Pressing either button also hides the picker view. For now, `STPickerView` adds two buttons to its button toolbar: *Pick* and *Cancel*. **It is assumed that there are image assets named `picker-button-pick.png` and `picker-button-cancel.png` to be used as button graphics.**
+For now, `LTPickerView` adds two buttons to its button toolbar: *Pick* and *Cancel*. **It is assumed that there are image assets named `picker-button-pick.png` and `picker-button-cancel.png` to be used as button graphics.** Classes that make use of `LTPickerView` should conform to the `LTPickerViewDelegate` and `UIPickerViewDataSource` protocols. `LTPickerView` will send callbacks to its delegate whenever the *Pick* or *Cancel* buttons are tapped, via `pickerView:didPickRows:` and `pickerViewDidCancel`, respectively. Tapping either button also hides the picker view.
 
-`STPickerView` supports multi-row pickers, and `pickerView:didPickRows:` provides the delegate with an array of `NSNumber`s (as `NSInteger`s) that represent the selected rows of each component. For example, in a three-component picker view, `pickerView:didPickRows:` might provide the following array: `[ 2, 0, 5 ]`. These means that the third, first, and sixth rows were selected from components one, two, and three, respectively.
+`LTPickerView` supports multi-row pickers, and `pickerView:didPickRows:` provides the delegate with an array of `NSNumber`s (as `NSInteger`s) that represent the selected rows of each component. For example, in a three-component picker view, `pickerView:didPickRows:` might provide the following array: `[ 2, 0, 5 ]`. These means that the third, first, and sixth rows were selected from components one, two, and three, respectively.
 
-STViewController<a name="stviewcontroller"></a>
+LTViewController<a name="ltviewcontroller"></a>
 ----------------
 [(back to top)](#top)
 
-### STViewController Methods ###
+### LTViewController Methods ###
 
     - ( void )dismissKeyboard;
 
 *This class should not contain any implementation-specific details.*
 
-`STViewController`, which is a subclass of `UIViewController`, currently has only one method, `dismissKeyboard`, which effectively hides the on-screen keyboard if it is being displayed. This is done by inspecting all of this class's properties (including all properties defined by any superclass or subclass) and asking for those that respond to the `isFirstResponder` selector. Any that are found are passed the `resignFirstResponder` message, which hides the keyboard as a side effect. In actuality, there can only be one first responder because of Cocoa's responder chain design paradigm, so continuing to check for a first responder after having already encountered one is not necessary.
+`LTViewController`, which is a subclass of `UIViewController`, currently has only one method, `dismissKeyboard`, which effectively hides the on-screen keyboard if it is being displayed. This is done by inspecting all of this class's properties (including all properties defined by any superclass or subclass) and asking for those that respond to the `isFirstResponder` selector. Any that are found are passed the `resignFirstResponder` message, which hides the keyboard as a side effect. In actuality, there can only be one first responder because of Cocoa's responder chain design paradigm, so continuing to check for a first responder after having already encountered one is not necessary.
 
 This method is convenient when you either don't know or don't care to manage any number of UI elements that can display the keyboard. Normally, something like the following is necessary:
 
@@ -97,23 +98,23 @@ This method is convenient when you either don't know or don't care to manage any
 	    // ...
     }
 
-If a particular view has only one or two UI objects that can become the first responder (e.g., UITextField), then it's not too troublesome to manually resign all of them. However, in the case where you either have too many objects to manage or, worse, you have to deal with dynamically generated objects, it's much easier to do the following:
+If a particular view has only one or two UI objects that can become the first responder (e.g., `UITextField`), then it's not too troublesome to manually resign all of them. However, in the case where you either have too many objects to manage or, worse, you have to deal with dynamically generated objects, it's much easier to do the following:
 
 	- ( void )someActionOccurred
     {
 	    // Want to hide the keyboard if it's being displayed...
-	    // 'self' is of type STViewController
+	    // 'self' is of type LTViewController
     
 	    [ self dismissKeyboard ];
 
 	    // ...
 	}
 
-CATransition+STAdditions<a name="catransition+stadditions"></a>
+CATransition+LTAdditions<a name="catransition+ltadditions"></a>
 ------------------------
 [(back to top)](#top)
 
-### CATransition+STAdditions Methods ###
+### CATransition+LTAdditions Methods ###
 
     + ( void )animationWithType:( NSString * )type subtype:( NSString * )subtype duration:( CFTimeInterval )duration
 		 timingFunctionWithName:( NSString * )timingFunctionName onLayer:( CALayer * )layer;
@@ -124,7 +125,7 @@ CATransition+STAdditions<a name="catransition+stadditions"></a>
 
 *This class should not contain any implementation-specific details.*
 
-`CATransition+STAdditions` was created to allow for `CATransition`-based layer animations to be created quickly and easily. It also allows for even easier creation of "standard" animations (default duration and timing function values).
+`CATransition+LTAdditions` was created to allow `CATransition`-based layer animations to be created quickly and easily. It also allows for even easier creation of "standard" animations (default duration and timing function values).
 
 For example, compare
 
@@ -141,20 +142,20 @@ with the functionally identical yet syntactically more succinct
     [ CATransition animationWithType:kCATransitionFade subtype:nil duration:0.4
               timingFunctionWithName:kCAMediaTimingFunctionEaseInEaseOut onLayer:someView.layer ];
 
-Also, if you find yourself typically creating the same simple animations over and over, you can use a standard animation method provided by `CATransition+STAdditions`: `[ CATransition standardFadeAnimationOnLayer:someView.layer ];` In these methods, default duration and timing functions values are used.
+Also, if you find yourself typically creating the same simple animations over and over, you can use a standard animation method provided by `CATransition+LTAdditions`: `[ CATransition standardFadeAnimationOnLayer:someView.layer ];` In these methods, default duration and timing functions values are used.
 
-NSArray+STAdditions<a name="nsarray+stadditions"></a>
+NSArray+LTAdditions<a name="nsarray+ltadditions"></a>
 -------------------
 [(back to top)](#top)
 
-### NSArray+STAdditions Methods ###
+### NSArray+LTAdditions Methods ###
 
     - ( NSArray * )sortedArrayWithDescriptorKey:( NSString * )key ascending:( BOOL )ascending;
     - ( NSArray * )sortedArrayWithDescriptorKeys:( NSArray * )keys ascending:( BOOL )ascending;
 
 *This class should not contain any implementation-specific details.*
 
-`NSArray+STAdditions` simplifies the sorting of arrays using sort descriptors.
+`NSArray+LTAdditions` simplifies the sorting of arrays using sort descriptors.
 
 For example, compare
 
@@ -162,13 +163,13 @@ For example, compare
     Person * secondPerson = [ [ Person alloc ] initWithName:@"Ana" homeTown:@"Snow Man" ];
     Person * thirdPerson  = [ [ Person alloc ] initWithName:@"Ninten" homeTown:@"Podunk" ];
 
-    NSArray * arrayToBeSorted = [ NSArray arrayWithObjects:firstPerson, secondPerson, thirdPerson, nil ];
+    NSArray * unsortedArray = [ NSArray arrayWithObjects:firstPerson, secondPerson, thirdPerson, nil ];
     NSMutableArray * sortDescriptors = [ NSMutableArray arrayWithCapacity:2 ];
 
     [ sortDescriptors addObject:[ [ [ NSSortDescriptor alloc ] initWithKey:@"homeTown" ascending:YES ] autorelease ] ];
     [ sortDescriptors addObject:[ [ [ NSSortDescriptor alloc ] initWithKey:@"name" ascending:YES ] autorelease ] ];
 
-    NSArray * sortedArray = [ arrayToBeSorted sortedArrayUsingDescriptors:sortDescriptors ];
+    NSArray * sortedArray = [ unsortedArray sortedArrayUsingDescriptors:sortDescriptors ];
 
 with the functionally similar yet syntactically more succinct
 
@@ -176,22 +177,22 @@ with the functionally similar yet syntactically more succinct
     Person * secondPerson = [ [ Person alloc ] initWithName:@"Ana" homeTown:@"Snow Man" ];
     Person * thirdPerson  = [ [ Person alloc ] initWithName:@"Ninten" homeTown:@"Podunk" ];
 
-	NSArray * arrayToBeSorted = [ NSArray arrayWithObjects:firstPerson, secondPerson, thirdPerson, nil ];
-    NSArray * sortedArray = [ arrayToBeSorted sortedArrayWithDescriptorKeys:[ NSArray arrayWithObjects:@"homeTown", @"name", nil ] ascending:YES ];
+	NSArray * unsortedArray = [ NSArray arrayWithObjects:firstPerson, secondPerson, thirdPerson, nil ];
+    NSArray * sortedArray = [ unsortedArray sortedArrayWithDescriptorKeys:[ NSArray arrayWithObjects:@"homeTown", @"name", nil ] ascending:YES ];
 						
 Both code snippets result in the same sorted array (e.g., `[ "Ninten from Podunk", "Pippi from Podunk", "Ana from Snow Man" ]` ), yet the second one is a little shorter. Note that these convenience methods require that all sort descriptors use the same sort order, provided by the `ascending` parameter.
 
-NSBundle+STAdditions<a name="nsbundle+stadditions"></a>
+NSBundle+LTAdditions<a name="nsbundle+ltadditions"></a>
 --------------------
 [(back to top)](#top)
 
-### NSBundle+STAdditions Methods ###
+### NSBundle+LTAdditions Methods ###
 
     - ( BOOL )resourceExistsWithFileName:( NSString * )fileName;
 
 *This class should not contain any implementation-specific details.*
 
-`NSBundle+STAdditions` simply provides a method to check for the existence of a file in the main resource bundle using the entire file name.
+`NSBundle+LTAdditions` simply provides a method to check for the existence of a file in the main resource bundle using the entire file name.
 
 For example, compare
 
@@ -210,11 +211,11 @@ with the functionally identical yet syntactically more succinct
 		// Do something...
 	}
 
-NSString+STAdditions<a name="nsstring+stadditions"></a>
+NSString+LTAdditions<a name="nsstring+ltadditions"></a>
 --------------------
 [(back to top)](#top)
 
-### NSString+STAdditions Methods ###
+### NSString+LTAdditions Methods ###
 
     - ( NSString * )dashedString;
     - ( BOOL )isNotEqualToString:( NSString * )string;
@@ -223,7 +224,7 @@ NSString+STAdditions<a name="nsstring+stadditions"></a>
 
 *This class should not contain any implementation-specific details.*
 
-`NSString+STAdditions` contains a few helper methods, mostly used to clean up syntax. `dashedString` lowercases a string and replaces all spaces " " with dashes "-". `isEmpty` checks for various conditions by which an `NSString` instance is typically considered to be empty: if it equals `@""`, `@"<null>"`, or `@"(null)"`. `isNotEqualToString:` and `isNotEmpty` are the logical inverses of `isEqualToString:` and `isEmpty`, respectively.
+`NSString+LTAdditions` contains a few helper methods, mostly used to clean up syntax. `dashedString` lowercases a string and replaces all spaces " " with dashes "-". `isEmpty` checks for various conditions by which an `NSString` instance is typically considered to be empty: if it equals `@""`, `@"<null>"`, or `@"(null)"`. `isNotEqualToString:` and `isNotEmpty` are the logical inverses of `isEqualToString:` and `isEmpty`, respectively.
 	
 In my opinion,
 
@@ -241,22 +242,22 @@ is a little cleaner syntactically than
 
 especially when chaining together multiple boolean expressions.
 
-UIActionSheet+STAdditions<a name="uiactionsheet+stadditions"></a>
+UIActionSheet+LTAdditions<a name="uiactionsheet+ltadditions"></a>
 -------------------------
 [(back to top)](#top)
 
-### UIActionSheet+STAdditions Methods ###
+### UIActionSheet+LTAdditions Methods ###
 
     + ( void )showYesNoActionSheetWithTitle:( NSString * )title delegate:( id )delegate;
 
 *This class probably contains implementation-specific details, most (if not all) of which are indicated in ***bold*** below.*
 
-`UIActionSheet+STAdditions` provides a method as a shorthand for creating a simple action sheet with a title and *Yes* and *No* buttons. **The implementation of `showYesNoActionSheetWithTitle:delegate:` is slightly implementation-specific in that it uses an action sheet style of `UIActionSheetStyleBlackTranslucent` and shows itself in the app delegate's key window.**
+`UIActionSheet+LTAdditions` provides a method as a shorthand for creating a simple action sheet with a title and *Yes* and *No* buttons. **The implementation of `showYesNoActionSheetWithTitle:delegate:` is slightly implementation-specific in that it uses an action sheet style of `UIActionSheetStyleBlackTranslucent` and shows itself in the app delegate's key window.**
 
 For example, compare
 
-	UIActionSheet * actionSheet = [ [ [ UIActionSheet alloc ] initWithTitle:@"This is an action sheet. Pick \"Yes\" or \"No\"."
-																   delegate:someInstance
+	UIActionSheet * actionSheet = [ [ [ UIActionSheet alloc ] initWithTitle:@"Pick \"Yes\" or \"No\"."
+																   delegate:self
 														  cancelButtonTitle:@"No"
 													 destructiveButtonTitle:@"Yes"
 														  otherButtonTitles:nil ] autorelease ];
@@ -267,20 +268,20 @@ For example, compare
 	
 with the functionally identical yet syntactically more succinct
 
-	[ UIActionSheet showYesNoActionSheetWithTitle:@"This is an action sheet. Pick \"Yes\" or \"No\"." delegate:someInstance ];
+	[ UIActionSheet showYesNoActionSheetWithTitle:@"Pick \"Yes\" or \"No\"." delegate:self ];
 
-UIAlertView+STAdditions<a name="uialertview+stadditions"></a>
+UIAlertView+LTAdditions<a name="uialertview+ltadditions"></a>
 -----------------------
 [(back to top)](#top)
 
-### UIAlertView+STAdditions Methods ###
+### UIAlertView+LTAdditions Methods ###
 
     + ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message;
 	+ ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message delegate:( id )delegate;
 	
 *This class should not contain any implementation-specific details.*
 
-`UIAlertView+STAdditions` provides methods for easily creating standard "OK" alert views.
+`UIAlertView+LTAdditions` provides methods for easily creating standard "OK" alert views.
 
 For example, compare
 
@@ -296,17 +297,17 @@ with the functionally identical yet syntactically more succinct
 
 	[ UIAlertView showStandardAlertViewWithTitle:@"Alert View" message:@"This is a simple alert view. Tap \"OK\"." ];
 
-UILabel+STAdditions<a name="uilabel+stadditions"></a>
+UILabel+LTAdditions<a name="uilabel+ltadditions"></a>
 -------------------
 [(back to top)](#top)
 
-### UILabel+STAdditions Methods ###
+### UILabel+LTAdditions Methods ###
 
     + ( id )label;
 
 *This class should not contain any implementation-specific details.*
 
-`UILabel+STAdditions` simply provides a convenience class method to create an autoreleased label.
+`UILabel+LTAdditions` simply provides a convenience class method to create an autoreleased label.
 
 Calling
 
@@ -316,11 +317,11 @@ is the same as calling
 
     [ [ [ UILabel alloc ] init ] autorelease ];
 
-UITableView+STAdditions<a name="uitableview+stadditions"></a>
+UITableView+LTAdditions<a name="uitableview+ltadditions"></a>
 -----------------------
 [(back to top)](#top)
 
-### UITableView+STAdditions Methods ###
+### UITableView+LTAdditions Methods ###
 
     - ( UITableViewCell * )createNewCellWithNibName:( NSString * )nibName;
     - ( UITableViewCell * )createNewCellWithClass:( Class )class;
@@ -329,7 +330,7 @@ UITableView+STAdditions<a name="uitableview+stadditions"></a>
 
 *This class probably contains implementation-specific details, most (if not all) of which are indicated in ***bold*** below.*
 
-`UITableView+STAdditions` allows you to easily create table view cells (reusable or not).
+`UITableView+LTAdditions` allows you to easily create table view cells (reusable or not).
 
 For example, compare
 
@@ -357,20 +358,20 @@ or
 
 	CustomTableViewCell * cell = ( CustomTableViewCell * )[ someTableView createNewCellWithClass:[ CustomTableViewCell class ] ];
 
-UITextField+STAdditions<a name="uitextfield+stadditions"></a>
+UITextField+LTAdditions<a name="uitextfield+ltadditions"></a>
 -----------------------
 [(back to top)](#top)
 
-![UITextField+STAdditions](http://farm3.static.flickr.com/2724/4196383250_c60db92c5b_o.png "UITextField+STAdditions")
+![UITextField+LTAdditions](http://farm3.static.flickr.com/2724/4196383250_c60db92c5b_o.png "UITextField+LTAdditions")
 
-### UITextField+STAdditions Methods ###
+### UITextField+LTAdditions Methods ###
 
     - ( void )setCaption:( NSString * )caption;
 	+ ( void )padCaptions:( UITextField * )firstCaption, ...;
 	
 *This class should not contain any implementation-specific details.*
 
-`UITextField+STAdditions` allows you to create a "caption" for a text field (see image above). It assigns a label to a text field's left view. A collection of text fields can all have their left views padded so that the widest text field caption label in the collection determines the width of all the other caption labels of the text fields in the same collection. This ensures that the entry point for the keyboard is the same for every text field.
+`UITextField+LTAdditions` allows you to create a "caption" for a text field (see image above). It assigns a label to a text field's left view. A collection of text fields can all have their left views padded so that the widest text field caption label in the collection determines the width of all the other caption labels of the text fields in the same collection. This ensures that the entry point for the keyboard is the same for every text field.
 
 For example,
 
@@ -385,11 +386,11 @@ For example,
 	
 produces the result in the sample image above. Because the "User Name" text field has the widest caption, its caption's width is used to add additional spacing to the rest of the text field captions so that all text field captions have the same width.
 
-UIView+STAdditions<a name="uiview+stadditions"></a>
+UIView+LTAdditions<a name="uiview+ltadditions"></a>
 ------------------
 [(back to top)](#top)
 
-### UIView+STAdditions Methods ###
+### UIView+LTAdditions Methods ###
 
     - ( void )setFrameX:( CGFloat )x;
 	- ( void )setFrameY:( CGFloat )y;
@@ -411,7 +412,7 @@ UIView+STAdditions<a name="uiview+stadditions"></a>
 
 *This class should not contain any implementation-specific details.*
 
-`UIView+STAdditions` contains several helper methods used to more easily adjust components of a view's frame (`origin.x`, `origin.y`, `size.width`, `size.height`). There are methods to completely change the values of these components (e.g., `setFrameX:`) as well as methods to simply adjust the values of the components relatively (e.g, `shiftFrameX:`). *Keep in mind that, although slightly counterintuitive, passing a positive `y` value for `setFrameY:`, `shiftFrameY:`, `setFrameY:animatedForDuration:` or `shiftFrameY:animatedForDuration:` will result in the view's position being below its original position visually. Conversely, a negative `y` value will result in the view's position being above its original position visually. This is due to how coordinate systems are typically implemented for GUIs.*
+`UIView+LTAdditions` contains several helper methods used to more easily adjust components of a view's frame (`origin.x`, `origin.y`, `size.width`, `size.height`). There are methods to completely change the values of these components (e.g., `setFrameX:`) as well as methods to simply adjust the values of the components relatively (e.g, `shiftFrameX:`). *Keep in mind that, although slightly counterintuitive, passing a positive `y` value for `setFrameY:`, `shiftFrameY:`, `setFrameY:animatedForDuration:` or `shiftFrameY:animatedForDuration:` will result in the view's position being below its original position visually. Conversely, a negative `y` value will result in the view's position being above its original position visually. This is due to how coordinate systems are typically implemented for GUIs.*
 
 If these methods are called with the `animatedForDuration:` selector set to a valid `NSTimeInterval` value, then the changes to the view will be animated using a `UIView` animation context. If the animation ID and context are not important for a particular animation (as they rarely are), you can use `beginAnimations` to avoid having to call `beginAnimations:context:`.
 

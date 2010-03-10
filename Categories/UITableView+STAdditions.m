@@ -1,5 +1,5 @@
 //
-//  UITableView+STAdditions.m
+//  UITableView+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
  
-#import "UITableView+STAdditions.h"
+#import "UITableView+LTAdditions.h"
  
-@implementation UITableView ( STAdditions )
+@implementation UITableView ( LTAdditions )
  
 #pragma mark -
-#pragma mark UITableView ( STAdditions ) Category Methods
+#pragma mark UITableView ( LTAdditions ) Category Methods
  
 - ( UITableViewCell * )createNewCellWithNibName:( NSString * )nibName
 {

@@ -1,5 +1,5 @@
 //
-//  UIView+STAdditions.m
+//  UIView+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "UIView+STAdditions.h"
+#import "UIView+LTAdditions.h"
 
-@implementation UIView ( STAdditions )
+@implementation UIView ( LTAdditions )
 
 #pragma mark -
-#pragma mark UIView ( STAdditions ) Category Methods
+#pragma mark UIView ( LTAdditions ) Category Methods
 
 - ( void )setFrameX:( CGFloat )x
 {

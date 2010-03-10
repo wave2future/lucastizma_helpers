@@ -1,5 +1,5 @@
 //
-//  UITextField+STAdditions.m
+//  UITextField+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "UITextField+STAdditions.h"
+#import "UITextField+LTAdditions.h"
 
-@implementation UITextField ( STAdditions )
+@implementation UITextField ( LTAdditions )
 
 #pragma mark -
-#pragma mark UITextField ( STAdditions ) Category Methods
+#pragma mark UITextField ( LTAdditions ) Category Methods
 
 // setCaption:caption
 //

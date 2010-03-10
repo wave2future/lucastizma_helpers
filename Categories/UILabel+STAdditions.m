@@ -1,5 +1,5 @@
 //
-//  UILabel+STAdditions.m
+//  UILabel+LTAdditions.m
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -16,12 +16,12 @@
 //  limitations under the License.
 //
 
-#import "UILabel+STAdditions.h"
+#import "UILabel+LTAdditions.h"
 
-@implementation UILabel ( STAdditions )
+@implementation UILabel ( LTAdditions )
 
 #pragma mark -
-#pragma mark UILabel ( STAdditions ) Category Methods
+#pragma mark UILabel ( LTAdditions ) Category Methods
 
 + ( id )label
 {

@@ -1,5 +1,5 @@
 //
-//  UITextField+STAdditions.h
+//  UITextField+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 // 
@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITextField ( STAdditions )
+@interface UITextField ( LTAdditions )
 
 - ( void )setCaption:( NSString * )caption;
 + ( void )padCaptions:( UITextField * )firstCaption, ...;
