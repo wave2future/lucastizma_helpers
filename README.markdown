@@ -6,6 +6,7 @@ Change Log
 
 Nontrivial changes to this repository will typically be logged here.
 
+- **03/10/2010 2:57 PM**: Added the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) to every file header.
 - **12/29/2009 12:33 PM**: Expanded the discussion of `STViewController`'s `dismissKeyboard` method.
 - **12/28/2009 6:41 PM**: Added `STViewController`.
 - **12/28/2009 3:20 PM**: Added `UILabel+STAdditions`.
