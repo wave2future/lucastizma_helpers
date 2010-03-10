@@ -6,11 +6,11 @@ Change Log
 
 Nontrivial changes to this repository will typically be logged here.
 
-- **03/10/2010 4:44 PM**: Rebranded the project as LucasTizma Helpers.
-- **03/10/2010 2:57 PM**: Added the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) to every file header.
+- **03/10/2010 04:44 PM**: Rebranded the project as LucasTizma Helpers.
+- **03/10/2010 02:57 PM**: Added the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) to every file header.
 - **12/29/2009 12:33 PM**: Expanded the discussion of `LTViewController`'s `dismissKeyboard` method.
-- **12/28/2009 6:41 PM**: Added `LTViewController`.
-- **12/28/2009 3:20 PM**: Added `UILabel+LTAdditions`.
+- **12/28/2009 06:41 PM**: Added `LTViewController`.
+- **12/28/2009 03:20 PM**: Added `UILabel+LTAdditions`.
 
 Overview
 --------
