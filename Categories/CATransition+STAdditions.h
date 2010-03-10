@@ -2,6 +2,10 @@
 //  CATransition+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
+//
+//  LucasTizma
+//  www.lucastizma.com
+//  lucastizma@lucastizma.com (E-mail/AIM)
 // 
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
