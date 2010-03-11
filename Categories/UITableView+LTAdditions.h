@@ -20,8 +20,6 @@
 //  limitations under the License.
 //
  
-#import <UIKit/UIKit.h>
- 
 @interface UITableView ( LTAdditions )
  
 - ( UITableViewCell * )createNewCellWithNibName:( NSString * )nibName;

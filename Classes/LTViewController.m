@@ -21,7 +21,7 @@
 //
 
 #import "LTViewController.h"
-#import "NSString+LTAddition.h"
+#import "NSString+LTAdditions.h"
 #import <objc/message.h>
 
 @implementation LTViewController

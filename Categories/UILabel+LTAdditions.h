@@ -1,5 +1,5 @@
 //
-//  UITextField+LTAdditions.h
+//  UILabel+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 //
@@ -20,11 +20,8 @@
 //  limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
+@interface UILabel ( LTAdditions )
 
-@interface UITextField ( LTAdditions )
-
-- ( void )setCaption:( NSString * )caption;
-+ ( void )padCaptions:( UITextField * )firstCaption, ...;
++ ( id )label;
 
 @end

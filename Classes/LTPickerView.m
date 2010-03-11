@@ -21,7 +21,7 @@
 //
 
 #import "LTPickerView.h"
-#import "LTGlobalReferences.h"
+#import "LTGlobal.h"
 
 @implementation LTPickerView
 
@@ -90,36 +90,36 @@ static NSString * kPickerViewHideAnimationID = @"LTPickerViewWillHide";
 
 - ( void )show
 {	
-	[ CATransition standardFadeAnimationOnLayer:LTActiveNavigationController.navigationBar.layer ];
-	[ CATransition standardFadeAnimationOnLayer:self.backgroundView.layer ];
-	
-	LTActiveViewController.navigationItem.leftBarButtonItem.enabled = NO;
-	LTActiveViewController.navigationItem.rightBarButtonItem.enabled = NO;
-	
-	self.hidden = NO;
-	self.backgroundView.hidden = NO;
-	
-	[ self.totalContainerView shiftFrameY:( -1.0 * self.totalContainerView.frame.size.height ) animatedForDuration:LTAnimationTimeIntervalDefault ];
+	//	[ CATransition standardFadeAnimationOnLayer:LTActiveNavigationController.navigationBar.layer ];
+	//	[ CATransition standardFadeAnimationOnLayer:self.backgroundView.layer ];
+	//	
+	//	LTActiveViewController.navigationItem.leftBarButtonItem.enabled = NO;
+	//	LTActiveViewController.navigationItem.rightBarButtonItem.enabled = NO;
+	//	
+	//	self.hidden = NO;
+	//	self.backgroundView.hidden = NO;
+	//	
+	//	[ self.totalContainerView shiftFrameY:( -1.0 * self.totalContainerView.frame.size.height ) animatedForDuration:LTAnimationTimeIntervalDefault ];
 }
 
 - ( void )hide
 {	
-	[ CATransition standardFadeAnimationOnLayer:LTActiveNavigationController.navigationBar.layer ];
-	[ CATransition standardFadeAnimationOnLayer:self.backgroundView.layer ];
-	
-	LTActiveViewController.navigationItem.leftBarButtonItem.enabled = YES;
-	LTActiveViewController.navigationItem.rightBarButtonItem.enabled = YES;
-	
-	self.backgroundView.hidden = YES;
-	
-	[ UIView beginAnimations:kPickerViewHideAnimationID context:NULL ];
-	[ UIView setAnimationDelegate:self ];
-	[ UIView setAnimationDidStopSelector:@selector( animationDidStop:finished:context: ) ];
-	[ UIView setAnimationDuration:LTAnimationTimeIntervalDefault ];
-	
-	[ self.totalContainerView shiftFrameY:self.totalContainerView.frame.size.height ];
-	
-	[ UIView commitAnimations ];
+	//	[ CATransition standardFadeAnimationOnLayer:LTActiveNavigationController.navigationBar.layer ];
+	//	[ CATransition standardFadeAnimationOnLayer:self.backgroundView.layer ];
+	//	
+	//	LTActiveViewController.navigationItem.leftBarButtonItem.enabled = YES;
+	//	LTActiveViewController.navigationItem.rightBarButtonItem.enabled = YES;
+	//	
+	//	self.backgroundView.hidden = YES;
+	//	
+	//	[ UIView beginAnimations:kPickerViewHideAnimationID context:NULL ];
+	//	[ UIView setAnimationDelegate:self ];
+	//	[ UIView setAnimationDidStopSelector:@selector( animationDidStop:finished:context: ) ];
+	//	[ UIView setAnimationDuration:LTAnimationTimeIntervalDefault ];
+	//	
+	//	[ self.totalContainerView shiftFrameY:self.totalContainerView.frame.size.height ];
+	//	
+	//	[ UIView commitAnimations ];
 }
 
 - ( void )animationDidStop:( NSString * )animationID finished:( NSNumber * )finished context:( void * )context
@@ -175,7 +175,7 @@ static NSString * kPickerViewHideAnimationID = @"LTPickerViewWillHide";
 		[ self addSubview:self.backgroundView ];
 		self.hidden = YES;
 		
-		[ LTAppDelegateTabBarController.selectedViewController.view addSubview:self ];
+		//	[ LTAppDelegateTabBarController.selectedViewController.view addSubview:self ];
 	}
 	
 	return self;

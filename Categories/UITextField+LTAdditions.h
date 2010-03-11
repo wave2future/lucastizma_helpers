@@ -1,5 +1,5 @@
 //
-//  UIActionSheet+LTAdditions.h
+//  UITextField+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 //
@@ -20,10 +20,9 @@
 //  limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
+@interface UITextField ( LTAdditions )
 
-@interface UIActionSheet ( LTAdditions )
-
-+ ( void )showYesNoActionSheetWithTitle:( NSString * )title delegate:( id )delegate;
+- ( void )setCaption:( NSString * )caption;
++ ( void )padCaptions:( UITextField * )firstCaption, ...;
 
 @end

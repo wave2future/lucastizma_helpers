@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		212A999E1148516800B38063 /* LTPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A999A1148516800B38063 /* LTPickerView.h */; };
+		212A999F1148516800B38063 /* LTViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A999B1148516800B38063 /* LTViewController.h */; };
+		212A99A01148516800B38063 /* LTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A999C1148516800B38063 /* LTPickerView.m */; };
+		212A99A11148516800B38063 /* LTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A999D1148516800B38063 /* LTViewController.m */; };
+		212A99B91148518B00B38063 /* CATransition+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99A51148518B00B38063 /* CATransition+LTAdditions.h */; };
+		212A99BA1148518B00B38063 /* NSArray+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99A61148518B00B38063 /* NSArray+LTAdditions.h */; };
+		212A99BB1148518B00B38063 /* NSBundle+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99A71148518B00B38063 /* NSBundle+LTAdditions.h */; };
+		212A99BC1148518B00B38063 /* NSString+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99A81148518B00B38063 /* NSString+LTAdditions.h */; };
+		212A99BD1148518B00B38063 /* UIActionSheet+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99A91148518B00B38063 /* UIActionSheet+LTAdditions.h */; };
+		212A99BE1148518B00B38063 /* UIAlertView+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99AA1148518B00B38063 /* UIAlertView+LTAdditions.h */; };
+		212A99BF1148518B00B38063 /* UILabel+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99AB1148518B00B38063 /* UILabel+LTAdditions.h */; };
+		212A99C01148518B00B38063 /* UITableView+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99AC1148518B00B38063 /* UITableView+LTAdditions.h */; };
+		212A99C11148518B00B38063 /* UITextField+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99AD1148518B00B38063 /* UITextField+LTAdditions.h */; };
+		212A99C21148518B00B38063 /* UIView+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A99AE1148518B00B38063 /* UIView+LTAdditions.h */; };
+		212A99C31148518B00B38063 /* CATransition+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99AF1148518B00B38063 /* CATransition+LTAdditions.m */; };
+		212A99C41148518B00B38063 /* NSArray+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B01148518B00B38063 /* NSArray+LTAdditions.m */; };
+		212A99C51148518B00B38063 /* NSBundle+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B11148518B00B38063 /* NSBundle+LTAdditions.m */; };
+		212A99C61148518B00B38063 /* NSString+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B21148518B00B38063 /* NSString+LTAdditions.m */; };
+		212A99C71148518B00B38063 /* UIActionSheet+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B31148518B00B38063 /* UIActionSheet+LTAdditions.m */; };
+		212A99C81148518B00B38063 /* UIAlertView+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B41148518B00B38063 /* UIAlertView+LTAdditions.m */; };
+		212A99C91148518B00B38063 /* UILabel+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B51148518B00B38063 /* UILabel+LTAdditions.m */; };
+		212A99CA1148518B00B38063 /* UITableView+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B61148518B00B38063 /* UITableView+LTAdditions.m */; };
+		212A99CB1148518B00B38063 /* UITextField+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B71148518B00B38063 /* UITextField+LTAdditions.m */; };
+		212A99CC1148518B00B38063 /* UIView+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B81148518B00B38063 /* UIView+LTAdditions.m */; };
+		212A9A1E11485C2400B38063 /* LTGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A9A1C11485C2400B38063 /* LTGlobal.h */; };
+		212A9A3811485D4500B38063 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212A9A3711485D4500B38063 /* QuartzCore.framework */; };
+		AA747D9F0F9514B9006C5449 /* LucasTizma_Helpers_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* LucasTizma_Helpers_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		212A999A1148516800B38063 /* LTPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTPickerView.h; path = Classes/LTPickerView.h; sourceTree = SOURCE_ROOT; };
+		212A999B1148516800B38063 /* LTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTViewController.h; path = Classes/LTViewController.h; sourceTree = SOURCE_ROOT; };
+		212A999C1148516800B38063 /* LTPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTPickerView.m; path = Classes/LTPickerView.m; sourceTree = SOURCE_ROOT; };
+		212A999D1148516800B38063 /* LTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTViewController.m; path = Classes/LTViewController.m; sourceTree = SOURCE_ROOT; };
+		212A99A51148518B00B38063 /* CATransition+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99A61148518B00B38063 /* NSArray+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99A71148518B00B38063 /* NSBundle+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99A81148518B00B38063 /* NSString+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99A91148518B00B38063 /* UIActionSheet+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99AA1148518B00B38063 /* UIAlertView+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99AB1148518B00B38063 /* UILabel+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99AC1148518B00B38063 /* UITableView+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99AD1148518B00B38063 /* UITextField+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99AE1148518B00B38063 /* UIView+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LTAdditions.h"; sourceTree = "<group>"; };
+		212A99AF1148518B00B38063 /* CATransition+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B01148518B00B38063 /* NSArray+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B11148518B00B38063 /* NSBundle+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B21148518B00B38063 /* NSString+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B31148518B00B38063 /* UIActionSheet+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B41148518B00B38063 /* UIAlertView+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B51148518B00B38063 /* UILabel+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B61148518B00B38063 /* UITableView+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B71148518B00B38063 /* UITextField+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LTAdditions.m"; sourceTree = "<group>"; };
+		212A99B81148518B00B38063 /* UIView+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LTAdditions.m"; sourceTree = "<group>"; };
+		212A9A1C11485C2400B38063 /* LTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTGlobal.h; sourceTree = "<group>"; };
+		212A9A3711485D4500B38063 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AA747D9E0F9514B9006C5449 /* LucasTizma_Helpers_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LucasTizma_Helpers_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libLucasTizmaHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLucasTizmaHelpers.a; path = "build/Debug-iphoneos/libLucasTizmaHelpers.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				212A9A3811485D4500B38063 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libLucasTizmaHelpers.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* LucasTizma Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				212A99A41148517900B38063 /* Categories */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				212A9AC7114860FE00B38063 /* Other */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = "LucasTizma Helpers";
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				212A9A3711485D4500B38063 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				212A999A1148516800B38063 /* LTPickerView.h */,
+				212A999C1148516800B38063 /* LTPickerView.m */,
+				212A999B1148516800B38063 /* LTViewController.h */,
+				212A999D1148516800B38063 /* LTViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		212A99A41148517900B38063 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				212A99A51148518B00B38063 /* CATransition+LTAdditions.h */,
+				212A99AF1148518B00B38063 /* CATransition+LTAdditions.m */,
+				212A99A61148518B00B38063 /* NSArray+LTAdditions.h */,
+				212A99B01148518B00B38063 /* NSArray+LTAdditions.m */,
+				212A99A71148518B00B38063 /* NSBundle+LTAdditions.h */,
+				212A99B11148518B00B38063 /* NSBundle+LTAdditions.m */,
+				212A99A81148518B00B38063 /* NSString+LTAdditions.h */,
+				212A99B21148518B00B38063 /* NSString+LTAdditions.m */,
+				212A99A91148518B00B38063 /* UIActionSheet+LTAdditions.h */,
+				212A99B31148518B00B38063 /* UIActionSheet+LTAdditions.m */,
+				212A99AA1148518B00B38063 /* UIAlertView+LTAdditions.h */,
+				212A99B41148518B00B38063 /* UIAlertView+LTAdditions.m */,
+				212A99AB1148518B00B38063 /* UILabel+LTAdditions.h */,
+				212A99B51148518B00B38063 /* UILabel+LTAdditions.m */,
+				212A99AC1148518B00B38063 /* UITableView+LTAdditions.h */,
+				212A99B61148518B00B38063 /* UITableView+LTAdditions.m */,
+				212A99AD1148518B00B38063 /* UITextField+LTAdditions.h */,
+				212A99B71148518B00B38063 /* UITextField+LTAdditions.m */,
+				212A99AE1148518B00B38063 /* UIView+LTAdditions.h */,
+				212A99B81148518B00B38063 /* UIView+LTAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		212A9AC7114860FE00B38063 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				212A9A1C11485C2400B38063 /* LTGlobal.h */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* LucasTizma_Helpers_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* LucasTizma_Helpers_Prefix.pch in Headers */,
+				212A999E1148516800B38063 /* LTPickerView.h in Headers */,
+				212A999F1148516800B38063 /* LTViewController.h in Headers */,
+				212A99B91148518B00B38063 /* CATransition+LTAdditions.h in Headers */,
+				212A99BA1148518B00B38063 /* NSArray+LTAdditions.h in Headers */,
+				212A99BB1148518B00B38063 /* NSBundle+LTAdditions.h in Headers */,
+				212A99BC1148518B00B38063 /* NSString+LTAdditions.h in Headers */,
+				212A99BD1148518B00B38063 /* UIActionSheet+LTAdditions.h in Headers */,
+				212A99BE1148518B00B38063 /* UIAlertView+LTAdditions.h in Headers */,
+				212A99BF1148518B00B38063 /* UILabel+LTAdditions.h in Headers */,
+				212A99C01148518B00B38063 /* UITableView+LTAdditions.h in Headers */,
+				212A99C11148518B00B38063 /* UITextField+LTAdditions.h in Headers */,
+				212A99C21148518B00B38063 /* UIView+LTAdditions.h in Headers */,
+				212A9A1E11485C2400B38063 /* LTGlobal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* LucasTizma Helpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "LucasTizma Helpers" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LucasTizma Helpers";
+			productName = "LucasTizma Helpers";
+			productReference = D2AAC07E0554694100DB518D /* libLucasTizmaHelpers.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "LucasTizma Helpers" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* LucasTizma Helpers */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* LucasTizma Helpers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212A99A01148516800B38063 /* LTPickerView.m in Sources */,
+				212A99A11148516800B38063 /* LTViewController.m in Sources */,
+				212A99C31148518B00B38063 /* CATransition+LTAdditions.m in Sources */,
+				212A99C41148518B00B38063 /* NSArray+LTAdditions.m in Sources */,
+				212A99C51148518B00B38063 /* NSBundle+LTAdditions.m in Sources */,
+				212A99C61148518B00B38063 /* NSString+LTAdditions.m in Sources */,
+				212A99C71148518B00B38063 /* UIActionSheet+LTAdditions.m in Sources */,
+				212A99C81148518B00B38063 /* UIAlertView+LTAdditions.m in Sources */,
+				212A99C91148518B00B38063 /* UILabel+LTAdditions.m in Sources */,
+				212A99CA1148518B00B38063 /* UITableView+LTAdditions.m in Sources */,
+				212A99CB1148518B00B38063 /* UITextField+LTAdditions.m in Sources */,
+				212A99CC1148518B00B38063 /* UIView+LTAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/LucasTizma_Helpers.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LucasTizma_Helpers_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = LucasTizma_Helpers;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/LucasTizma_Helpers.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LucasTizma_Helpers_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = LucasTizma_Helpers;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1;
+			};
+			name = Release;
+		};
+		212A9ACA1148612700B38063 /* Debug LLVM */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphonesimulator3.1;
+			};
+			name = "Debug LLVM";
+		};
+		212A9ACB1148612700B38063 /* Debug LLVM */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/LucasTizma_Helpers.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LucasTizma_Helpers_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = LucasTizma_Helpers;
+			};
+			name = "Debug LLVM";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "LucasTizma Helpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				212A9ACB1148612700B38063 /* Debug LLVM */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "LucasTizma Helpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				212A9ACA1148612700B38063 /* Debug LLVM */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

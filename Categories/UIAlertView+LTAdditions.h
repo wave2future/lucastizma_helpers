@@ -1,5 +1,5 @@
 //
-//  UILabel+LTAdditions.h
+//  UIAlertView+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 //
@@ -20,10 +20,9 @@
 //  limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
+@interface UIAlertView ( LTAdditions )
 
-@interface UILabel ( LTAdditions )
-
-+ ( id )label;
++ ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message;
++ ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message delegate:( id )delegate;
 
 @end

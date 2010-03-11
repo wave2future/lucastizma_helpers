@@ -6,6 +6,7 @@ Change Log
 
 Nontrivial changes to this repository will typically be logged here.
 
+- **03/10/2010 07:17 PM**: Restructured the project as an Xcode project that builds a static library.
 - **03/10/2010 04:44 PM**: Rebranded the project as LucasTizma Helpers.
 - **03/10/2010 02:57 PM**: Added the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) to every file header.
 - **12/29/2009 12:33 PM**: Expanded the discussion of `LTViewController`'s `dismissKeyboard` method.

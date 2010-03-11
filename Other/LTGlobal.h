@@ -1,5 +1,5 @@
 //
-//  UIAlertView+LTAdditions.h
+//  LTGlobal.h
 //
 //  Copyright 2010 Michael Shannon Potter
 //
@@ -20,11 +20,20 @@
 //  limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
+#pragma mark Apple Frameworks
 
-@interface UIAlertView ( LTAdditions )
+#import <QuartzCore/QuartzCore.h>
 
-+ ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message;
-+ ( void )showStandardAlertViewWithTitle:( NSString * )title message:( NSString * )message delegate:( id )delegate;
+#pragma mark -
+#pragma mark Categories
 
-@end
+#import "CATransition+LTAdditions.h"
+#import "NSArray+LTAdditions.h"
+#import "NSBundle+LTAdditions.h"
+#import "NSString+LTAdditions.h"
+#import "UIActionSheet+LTAdditions.h"
+#import "UIAlertView+LTAdditions.h"
+#import "UILabel+LTAdditions.h"
+#import "UITableView+LTAdditions.h"
+#import "UITextField+LTAdditions.h"
+#import "UIView+LTAdditions.h"

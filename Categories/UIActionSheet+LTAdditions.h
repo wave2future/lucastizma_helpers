@@ -1,5 +1,5 @@
 //
-//  LTViewController.h
+//  UIActionSheet+LTAdditions.h
 //
 //  Copyright 2010 Michael Shannon Potter
 //
@@ -20,8 +20,8 @@
 //  limitations under the License.
 //
 
-@interface LTViewController : UIViewController
+@interface UIActionSheet ( LTAdditions )
 
-- ( void )dismissKeyboard;
++ ( void )showYesNoActionSheetWithTitle:( NSString * )title delegate:( id )delegate;
 
 @end

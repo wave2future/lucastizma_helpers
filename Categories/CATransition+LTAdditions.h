@@ -20,7 +20,6 @@
 //  limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface CATransition ( LTAdditions )
