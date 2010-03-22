@@ -33,6 +33,7 @@
 		212A99CC1148518B00B38063 /* UIView+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A99B81148518B00B38063 /* UIView+LTAdditions.m */; };
 		212A9A1E11485C2400B38063 /* LTGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 212A9A1C11485C2400B38063 /* LTGlobal.h */; };
 		212A9A3811485D4500B38063 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212A9A3711485D4500B38063 /* QuartzCore.framework */; };
+		21AFC8E2115809C300927921 /* LTHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 21AFC8E0115809C300927921 /* LTHelpers.h */; };
 		AA747D9F0F9514B9006C5449 /* LucasTizma_Helpers_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* LucasTizma_Helpers_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -64,9 +65,10 @@
 		212A99B81148518B00B38063 /* UIView+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LTAdditions.m"; sourceTree = "<group>"; };
 		212A9A1C11485C2400B38063 /* LTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTGlobal.h; sourceTree = "<group>"; };
 		212A9A3711485D4500B38063 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		21AFC8E0115809C300927921 /* LTHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTHelpers.h; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* LucasTizma_Helpers_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LucasTizma_Helpers_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libLucasTizmaHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLucasTizmaHelpers.a; path = "build/Debug-iphoneos/libLucasTizmaHelpers.a"; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libLucasTizma_Helpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLucasTizma_Helpers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libLucasTizmaHelpers.a */,
+				D2AAC07E0554694100DB518D /* libLucasTizma_Helpers.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				212A9A1C11485C2400B38063 /* LTGlobal.h */,
+				21AFC8E0115809C300927921 /* LTHelpers.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				212A99C11148518B00B38063 /* UITextField+LTAdditions.h in Headers */,
 				212A99C21148518B00B38063 /* UIView+LTAdditions.h in Headers */,
 				212A9A1E11485C2400B38063 /* LTGlobal.h in Headers */,
+				21AFC8E2115809C300927921 /* LTHelpers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +211,7 @@
 			);
 			name = "LucasTizma Helpers";
 			productName = "LucasTizma Helpers";
-			productReference = D2AAC07E0554694100DB518D /* libLucasTizmaHelpers.a */;
+			productReference = D2AAC07E0554694100DB518D /* libLucasTizma_Helpers.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */

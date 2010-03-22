@@ -1,5 +1,5 @@
 //
-//  NSBundle+LTAdditions.h
+//  LTHelpers.h
 //
 //  Copyright 2010 Michael Shannon Potter
 //
@@ -20,8 +20,4 @@
 //  limitations under the License.
 //
 
-@interface NSBundle ( LTAdditions )
-
-- ( BOOL )resourceExistsWithFileName:( NSString * )fileName;
-
-@end
+#import "LTGlobal.h"

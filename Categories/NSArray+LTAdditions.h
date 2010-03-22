@@ -20,8 +20,6 @@
 //  limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface NSArray ( LTAdditions )
 
 - ( NSArray * )sortedArrayWithDescriptorKey:( NSString * )key ascending:( BOOL )ascending;
