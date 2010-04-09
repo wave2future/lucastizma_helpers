@@ -107,6 +107,16 @@
 	[ UIView commitAnimations ];
 }
 
+- ( void )setCenter:( CGPoint )center animatedForDuration:( NSTimeInterval )duration
+{
+	[ UIView beginAnimations ];
+	[ UIView setAnimationDuration:duration];
+	
+	self.center = center;
+	
+	[ UIView commitAnimations ];
+}
+
 - ( void )shiftFrameX:( CGFloat )x animatedForDuration:( NSTimeInterval )duration
 {
 	[ UIView beginAnimations ];

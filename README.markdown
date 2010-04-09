@@ -405,6 +405,7 @@ UIView+LTAdditions<a name="uiview+ltadditions"></a>
 	- ( void )setFrameY:( CGFloat )y animatedForDuration:( NSTimeInterval )duration;
 	- ( void )setFrameWidth:( CGFloat )width animatedForDuration:( NSTimeInterval )duration;
 	- ( void )setFrameHeight:( CGFloat )height animatedForDuration:( NSTimeInterval )duration;
+	- ( void )setCenter:( CGPoint )center animatedForDuration:( NSTimeInterval )duration;
 	- ( void )shiftFrameX:( CGFloat )x animatedForDuration:( NSTimeInterval )duration;
 	- ( void )shiftFrameY:( CGFloat )y animatedForDuration:( NSTimeInterval )duration;
 	- ( void )shiftFrameWidth:( CGFloat )width animatedForDuration:( NSTimeInterval )duration;
